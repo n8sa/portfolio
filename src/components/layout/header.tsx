@@ -2,87 +2,92 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Menu, Mountain } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
 
 const navLinks = [
+  { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
+  { href: "#featured", label: "Featured" },
   { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
   { href: "#education", label: "Education" },
+  { href: "#skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
 ];
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = React.useState(false);
+  const [activeSection, setActiveSection] = React.useState("home");
 
   React.useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      const sections = navLinks.map(link => {
+        const href = link.href;
+        // For the home link, we want to check for the top of the page
+        if (href === '#home') {
+          return document.getElementById('home');
+        }
+        return document.getElementById(href.substring(1));
+      });
+      
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      // Special case for home
+      if (scrollPosition < windowHeight / 2) {
+        setActiveSection("home");
+        return;
+      }
+
+      for (const section of sections) {
+        if (section) {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          if (scrollPosition + windowHeight / 2 >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            setActiveSection(section.id);
+            return;
+          }
+        }
+      }
     };
+
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? "border-b border-border/40 bg-background/80 backdrop-blur-sm" : ""
-      }`}
+      className="fixed top-0 right-0 z-50 flex h-screen items-center p-4 md:p-6"
     >
-      <div className="container flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 font-headline text-lg font-bold transition-transform hover:scale-105">
-          <Mountain className="h-6 w-6 text-primary" />
-          <span className="text-foreground">Farah Nisa</span>
-        </Link>
-
-        <nav className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-            >
+      <nav className="flex flex-col items-center gap-4">
+        {navLinks.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="group relative flex items-center"
+            onClick={(e) => {
+              e.preventDefault();
+              const targetId = link.href.substring(1);
+              const targetElement = document.getElementById(targetId);
+              if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+              } else if (link.href === '#home') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
+          >
+            <span className={cn(
+                "absolute right-full mr-3 hidden rounded-md bg-primary px-2 py-1 text-xs font-bold uppercase text-primary-foreground opacity-0 transition-all duration-300 group-hover:opacity-100 md:block",
+                activeSection === link.href.substring(1) && "opacity-100"
+            )}>
               {link.label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="flex items-center gap-4">
-            <Sheet>
-            <SheetTrigger asChild>
-                <Button variant="outline" size="icon" className="md:hidden rounded-full">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle Menu</span>
-                </Button>
-            </SheetTrigger>
-            <SheetContent side="right">
-                <div className="flex flex-col gap-6 p-6">
-                <Link href="/" className="flex items-center gap-2 font-headline text-lg font-bold">
-                    <Mountain className="h-6 w-6 text-primary" />
-                    <span>Farah Nisa</span>
-                </Link>
-                <nav className="flex flex-col gap-4">
-                    {navLinks.map((link) => (
-                    <Link
-                        key={link.href}
-                        href={link.href}
-                        className="text-base font-medium text-muted-foreground transition-colors hover:text-primary"
-                    >
-                        {link.label}
-                    </Link>
-                    ))}
-                </nav>
-                <Button asChild>
-                    <Link href="#contact">Get In Touch</Link>
-                </Button>
-                </div>
-            </SheetContent>
-            </Sheet>
-        </div>
-      </div>
+            </span>
+            <div className={cn(
+              "h-2.5 w-2.5 rounded-full bg-foreground/30 transition-all duration-300 group-hover:scale-125 group-hover:bg-primary",
+              activeSection === link.href.substring(1) ? "scale-150 bg-primary" : ""
+            )}></div>
+          </Link>
+        ))}
+      </nav>
     </header>
   );
 }
