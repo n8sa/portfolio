@@ -3,6 +3,17 @@ import { Briefcase, CheckCircle } from "lucide-react";
 
 const workExperience = [
     {
+        company: "Astro Awani Network",
+        role: "Digital Tech Apprentice",
+        duration: "Aug 2023 - Current",
+        responsibilities: [
+            "Spearheaded the development and maintenance of web applications using React, Next.js, and Node.js, resulting in a 20% increase in user engagement.",
+            "Integrated AI-powered content generation features into the company's CMS, reducing content creation time by 30%.",
+            "Managed cloud infrastructure on AWS and GCP, ensuring high availability and scalability for all applications.",
+            "Contributed to the development of the Ramadan and Budget 2026 microsites, attracting over 1 million unique visitors.",
+        ]
+    },
+    {
         company: "Fujitsu System Global Solution Sdn Bhd",
         role: "System Engineer",
         duration: "Feb 2022 - Apr 2025",
@@ -28,14 +39,14 @@ const workExperience = [
         ]
     },
     {
-        company: "Astro Awani Network",
-        role: "Digital Tech Apprentice",
-        duration: "Aug 2023 - May 2024",
+        company: "Petronas Digital Sdn Bhd",
+        role: "Software Engineer (Internship)",
+        duration: "May 2021 – Aug 2021",
         responsibilities: [
-            "Spearheaded the development and maintenance of web applications using React, Next.js, and Node.js, resulting in a 20% increase in user engagement.",
-            "Integrated AI-powered content generation features into the company's CMS, reducing content creation time by 30%.",
-            "Managed cloud infrastructure on AWS and GCP, ensuring high availability and scalability for all applications.",
-            "Contributed to the development of the Ramadan and Budget 2026 microsites, attracting over 1 million unique visitors.",
+            "Built a performance monitoring dashboard using React.js, HTML & CSS, enabling senior leaders to track 5+ teams in real-time.",
+            "Used Postman to create and test APIs linking the dashboard with backend services.",
+            "Implemented a custom task rating system to support workload distribution and strategic planning.",
+            "Supported project documentation and functional validation activities in Agile development cycles."
         ]
     }
 ];
