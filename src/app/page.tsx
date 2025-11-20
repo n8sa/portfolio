@@ -6,6 +6,7 @@ import { Skills } from '@/components/sections/skills';
 import { Contact } from '@/components/sections/contact';
 import { Experience } from '@/components/sections/experience';
 import { Education } from '@/components/sections/education';
+import { About } from '@/components/sections/about';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <About />
         <Experience />
         <Projects />
         <Skills />

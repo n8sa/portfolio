@@ -70,7 +70,7 @@ const companies = [
 
 export function Experience() {
   return (
-    <section id="experience" className="w-full bg-background py-24 sm:py-32">
+    <section id="experience" className="w-full bg-background pb-24 sm:pb-32">
       <div className="container">
         <div className="mb-16 max-w-3xl">
             <h2 className="font-headline text-5xl font-bold tracking-tighter text-foreground sm:text-6xl md:text-7xl">
@@ -81,31 +81,24 @@ export function Experience() {
             </p>
         </div>
 
-        <div className="mx-auto max-w-4xl space-y-8">
+        <div className="relative border-l-2 border-primary/20 pl-8 space-y-12">
             {workExperience.map((job, index) => (
-                <Card key={index} className="overflow-hidden border-border bg-card/50 transition-shadow duration-300 hover:shadow-primary/10 hover:shadow-lg">
-                    <CardHeader>
-                        <div className="flex items-start justify-between gap-4">
-                            <div>
-                                <CardTitle className="font-headline text-2xl text-primary">{job.role}</CardTitle>
-                                <CardDescription className="text-base text-foreground/80">{job.company}</CardDescription>
-                            </div>
-                            <div className="text-right text-sm text-muted-foreground whitespace-nowrap pt-1">
-                                {job.duration}
-                            </div>
-                        </div>
-                    </CardHeader>
-                    <CardContent>
-                        <ul className="space-y-3">
+                <div key={index} className="relative">
+                    <div className="absolute -left-8 -translate-x-1/2 top-1 h-3 w-3 rounded-full bg-primary"></div>
+                    <div>
+                        <p className="text-sm text-muted-foreground">{job.duration}</p>
+                        <h3 className="text-xl font-bold text-primary">{job.role}</h3>
+                        <p className="font-semibold text-foreground/80">{job.company}</p>
+                        <ul className="mt-4 space-y-3">
                             {job.responsibilities.map((task, i) => (
                                 <li key={i} className="flex items-start gap-3">
-                                    <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                                    <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-primary/80" />
                                     <span className="text-muted-foreground">{task}</span>
                                 </li>
                             ))}
                         </ul>
-                    </CardContent>
-                </Card>
+                    </div>
+                </div>
             ))}
         </div>
         
