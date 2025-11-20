@@ -3,6 +3,31 @@ import { Briefcase, CheckCircle } from "lucide-react";
 
 const workExperience = [
     {
+        company: "Fujitsu System Global Solution Sdn Bhd",
+        role: "System Engineer",
+        duration: "Feb 2022 - Apr 2025",
+        responsibilities: [
+            "Deployed and configured 10+ Azure Virtual Machines (Windows Server 2016/2019/2022 with Japanese locale).",
+            "Streamlined deployments by 15% through efficient resource group setup and server parameter tuning.",
+            "Migrated data across VMs using PowerShell, OneDrive, and SharePoint automation in ServiceNow-driven workflows.",
+            "Explored Microsoft Power Apps and Power Automate through self-learning and exposure to an internal productivity tracking system.",
+            "Automated bulk Excel processing using VBScript, cutting manual effort by over 50%.",
+            "Enhanced financial reporting visibility by integrating PowerShell and Batch scripts for log tracking and system auditing.",
+            "Converted legacy VBA logic into T-SQL, accelerating query performance by 40% for Japanese backend applications."
+        ]
+    },
+    {
+        company: "Parkson Credit Sdn Bhd",
+        role: "Software Engineer",
+        duration: "Sep 2021 - Feb 2022",
+        responsibilities: [
+            "Redesigned UI for enterprise web system using React.js and Ant Design, improving load times by 30% and user satisfaction.",
+            "Developed standardized layout components, resulting in 50% faster feature deployments.",
+            "Streamlined team workflows using GitHub and Jira, enhancing project tracking accuracy by 25%.",
+            "Expanded backend proficiency through hands-on experience with Node.js, C#, and SQL."
+        ]
+    },
+    {
         company: "Astro Awani Network",
         role: "Full-stack Developer",
         duration: "Aug 2023 - May 2024",
