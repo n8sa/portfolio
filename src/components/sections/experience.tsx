@@ -29,23 +29,13 @@ const workExperience = [
     },
     {
         company: "Astro Awani Network",
-        role: "Full-stack Developer",
+        role: "Digital Tech Apprentice",
         duration: "Aug 2023 - May 2024",
         responsibilities: [
             "Spearheaded the development and maintenance of web applications using React, Next.js, and Node.js, resulting in a 20% increase in user engagement.",
             "Integrated AI-powered content generation features into the company's CMS, reducing content creation time by 30%.",
             "Managed cloud infrastructure on AWS and GCP, ensuring high availability and scalability for all applications.",
             "Contributed to the development of the Ramadan and Budget 2026 microsites, attracting over 1 million unique visitors.",
-        ]
-    },
-    {
-        company: "Telekom Malaysia",
-        role: "Software Engineer Intern",
-        duration: "Feb 2023 - Aug 2023",
-        responsibilities: [
-            "Developed and maintained web applications using React and Node.js.",
-            "Collaborated with cross-functional teams to deliver high-quality software products.",
-            "Participated in code reviews and contributed to the team's best practices."
         ]
     }
 ];
