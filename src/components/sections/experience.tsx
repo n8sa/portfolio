@@ -11,6 +11,9 @@ const workExperience = [
             "Integrated AI-powered content generation features into the company's CMS, reducing content creation time by 30%.",
             "Managed cloud infrastructure on AWS and GCP, ensuring high availability and scalability for all applications.",
             "Contributed to the development of the Ramadan and Budget 2026 microsites, attracting over 1 million unique visitors.",
+            "Assisted with data entry and verification for the Sabah state election (PRN Sabah) to ensure data integrity.",
+            "Input historical election data from PRN Sabah 2020 for comparative analysis with current results.",
+            "Validated candidate names and other critical election data points for accuracy.",
         ]
     },
     {
