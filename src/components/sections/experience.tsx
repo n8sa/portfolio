@@ -14,6 +14,8 @@ const workExperience = [
             "Assisted with data entry and verification for the Sabah state election (PRN Sabah) to ensure data integrity.",
             "Input historical election data from PRN Sabah 2020 for comparative analysis with current results.",
             "Validated candidate names and other critical election data points for accuracy.",
+            "Gained insight into business processes through participation in client and contractor meetings, and learned negotiation skills.",
+            "Proactively proposed innovative ideas for new AI-driven projects."
         ]
     },
     {
