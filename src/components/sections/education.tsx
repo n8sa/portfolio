@@ -37,17 +37,17 @@ export function Education() {
   return (
     <section id="education" className="w-full bg-background py-24 sm:py-32">
       <div className="container">
-        <div className="mb-16 text-center">
-            <h2 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-                Education & Certifications
+        <div className="mb-16 max-w-3xl">
+            <h2 className="font-headline text-5xl font-bold tracking-tighter text-foreground sm:text-6xl md:text-7xl">
+                Education & Certs
             </h2>
-            <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
+            <p className="mt-4 text-lg text-muted-foreground">
                 My academic background and professional certifications.
             </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-            <Card>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <Card className="border-border bg-card/50">
                 <CardHeader>
                     <CardTitle className="flex items-center gap-3 font-headline text-2xl">
                         <GraduationCap className="h-7 w-7 text-primary" />
@@ -64,7 +64,7 @@ export function Education() {
                     ))}
                 </CardContent>
             </Card>
-            <Card>
+            <Card className="border-border bg-card/50">
                 <CardHeader>
                     <CardTitle className="flex items-center gap-3 font-headline text-2xl">
                         <Award className="h-7 w-7 text-primary" />

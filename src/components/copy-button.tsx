@@ -32,13 +32,18 @@ export function CopyButton({ textToCopy }: CopyButtonProps) {
   };
 
   return (
-    <Button onClick={handleCopy} variant="outline" className="w-full justify-start text-left">
+    <Button onClick={handleCopy} variant="outline" className="w-full justify-center text-left rounded-full">
       {isCopied ? (
-        <Check className="mr-2 h-4 w-4 text-green-500" />
+        <>
+          <Check className="mr-2 h-4 w-4 text-green-500" />
+          Copied!
+        </>
       ) : (
-        <Copy className="mr-2 h-4 w-4" />
+        <>
+          <Copy className="mr-2 h-4 w-4" />
+          <span className="truncate">{textToCopy}</span>
+        </>
       )}
-      <span className="truncate">{textToCopy}</span>
     </Button>
   );
 }

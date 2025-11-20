@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Linkedin } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 import { CopyButton } from "@/components/copy-button";
 
@@ -9,43 +9,44 @@ export function Contact() {
   const email = "farah.nisa.dev@example.com";
 
   return (
-    <section id="contact" className="w-full bg-background py-24 sm:py-32">
+    <section id="contact" className="w-full bg-secondary/20 py-24 sm:py-32">
       <div className="container">
         <div className="mb-16 text-center">
-            <h2 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+            <h2 className="font-headline text-5xl font-bold tracking-tighter text-foreground sm:text-6xl md:text-7xl">
                 Get In Touch
             </h2>
-            <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
+            <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
                 Have a project in mind or just want to say hello? I'd love to hear from you.
             </p>
         </div>
         
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
-            <Card>
+        <div className="mx-auto max-w-lg">
+            <Card className="border-border bg-card/50">
                 <CardHeader>
-                    <CardTitle className="font-headline text-2xl">Send me a message</CardTitle>
+                    <CardTitle className="font-headline text-2xl">Send a message</CardTitle>
                     <CardDescription>I'll get back to you as soon as possible.</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <ContactForm />
                 </CardContent>
             </Card>
-            <div className="flex flex-col justify-center gap-6">
-                 <Card className="bg-card">
-                    <CardContent className="p-6">
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <Card className="bg-card/50">
+                    <CardContent className="p-4 flex flex-col items-center text-center">
+                        <Mail className="h-8 w-8 mb-2 text-primary"/>
                         <h3 className="font-semibold">Email</h3>
                         <p className="text-muted-foreground text-sm mb-4">For direct inquiries.</p>
                         <CopyButton textToCopy={email} />
                     </CardContent>
                  </Card>
-                 <Card className="bg-card">
-                    <CardContent className="p-6">
+                 <Card className="bg-card/50">
+                    <CardContent className="p-4 flex flex-col items-center text-center">
+                        <Linkedin className="h-8 w-8 mb-2 text-primary"/>
                         <h3 className="font-semibold">LinkedIn</h3>
-                        <p className="text-muted-foreground text-sm mb-4">Connect with me professionally.</p>
-                        <Button asChild className="w-full">
+                        <p className="text-muted-foreground text-sm mb-4">Connect with me.</p>
+                        <Button asChild className="w-full rounded-full">
                             <Link href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                                <Linkedin className="mr-2 h-4 w-4" />
-                                Visit my LinkedIn
+                                Visit LinkedIn
                             </Link>
                         </Button>
                     </CardContent>

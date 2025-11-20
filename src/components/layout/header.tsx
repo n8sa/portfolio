@@ -29,21 +29,21 @@ export function Header() {
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? "border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" : ""
+        isScrolled ? "border-b border-border/40 bg-background/80 backdrop-blur-sm" : ""
       }`}
     >
       <div className="container flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 font-headline text-lg font-bold">
+        <Link href="/" className="flex items-center gap-2 font-headline text-lg font-bold transition-transform hover:scale-105">
           <Mountain className="h-6 w-6 text-primary" />
-          <span>Farah Nisa</span>
+          <span className="text-foreground">Farah Nisa</span>
         </Link>
 
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               {link.label}
             </Link>
@@ -51,12 +51,9 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-4">
-            <Button asChild className="hidden md:inline-flex">
-                <Link href="#contact">Get In Touch</Link>
-            </Button>
             <Sheet>
             <SheetTrigger asChild>
-                <Button variant="outline" size="icon" className="md:hidden">
+                <Button variant="outline" size="icon" className="md:hidden rounded-full">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle Menu</span>
                 </Button>
@@ -72,7 +69,7 @@ export function Header() {
                     <Link
                         key={link.href}
                         href={link.href}
-                        className="text-base font-medium text-foreground/80 transition-colors hover:text-foreground"
+                        className="text-base font-medium text-muted-foreground transition-colors hover:text-primary"
                     >
                         {link.label}
                     </Link>

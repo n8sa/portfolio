@@ -67,7 +67,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Your Name" {...field} />
+                <Input placeholder="Your Name" {...field} className="rounded-full" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -80,7 +80,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="your.email@example.com" {...field} />
+                <Input placeholder="your.email@example.com" {...field} className="rounded-full" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -95,7 +95,7 @@ export function ContactForm() {
               <FormControl>
                 <Textarea
                   placeholder="Tell me about your project or just say hello!"
-                  className="min-h-[120px]"
+                  className="min-h-[120px] rounded-2xl"
                   {...field}
                 />
               </FormControl>
@@ -103,7 +103,7 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full" disabled={isSubmitting}>
+        <Button type="submit" className="w-full rounded-full" disabled={isSubmitting}>
           {isSubmitting ? (
             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
           ) : (

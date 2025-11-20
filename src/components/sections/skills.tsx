@@ -25,18 +25,18 @@ export function Skills() {
   return (
     <section id="skills" className="w-full bg-background py-24 sm:py-32">
       <div className="container">
-        <div className="mb-16 text-center">
-            <h2 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+        <div className="mb-16 max-w-3xl">
+            <h2 className="font-headline text-5xl font-bold tracking-tighter text-foreground sm:text-6xl md:text-7xl">
                 My Tech Stack
             </h2>
-            <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
+            <p className="mt-4 text-lg text-muted-foreground">
                 Technologies and tools I use to build modern, reliable applications.
             </p>
         </div>
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {Object.entries(skills).map(([category, { icon, items }]) => (
-            <Card key={category} className="transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+            <Card key={category} className="border-border bg-card/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-2">
               <CardHeader className="flex-row items-center gap-4">
                 {icon}
                 <CardTitle className="font-headline text-xl">{category}</CardTitle>

@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Briefcase, CheckCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import Image from "next/image";
 
 const workExperience = [
@@ -72,25 +72,25 @@ export function Experience() {
   return (
     <section id="experience" className="w-full bg-background py-24 sm:py-32">
       <div className="container">
-        <div className="mb-16 text-center">
-            <h2 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+        <div className="mb-16 max-w-3xl">
+            <h2 className="font-headline text-5xl font-bold tracking-tighter text-foreground sm:text-6xl md:text-7xl">
                 Work Experience
             </h2>
-            <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
+            <p className="mt-4 text-lg text-muted-foreground">
                 My professional journey and key accomplishments.
             </p>
         </div>
 
         <div className="mx-auto max-w-4xl space-y-8">
             {workExperience.map((job, index) => (
-                <Card key={index} className="overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                <Card key={index} className="overflow-hidden border-border bg-card/50 transition-shadow duration-300 hover:shadow-primary/10 hover:shadow-lg">
                     <CardHeader>
-                        <div className="flex items-start justify-between">
+                        <div className="flex items-start justify-between gap-4">
                             <div>
-                                <CardTitle className="font-headline text-2xl">{job.role}</CardTitle>
-                                <CardDescription className="text-base">{job.company}</CardDescription>
+                                <CardTitle className="font-headline text-2xl text-primary">{job.role}</CardTitle>
+                                <CardDescription className="text-base text-foreground/80">{job.company}</CardDescription>
                             </div>
-                            <div className="text-right text-sm text-muted-foreground whitespace-nowrap">
+                            <div className="text-right text-sm text-muted-foreground whitespace-nowrap pt-1">
                                 {job.duration}
                             </div>
                         </div>
@@ -100,7 +100,7 @@ export function Experience() {
                             {job.responsibilities.map((task, i) => (
                                 <li key={i} className="flex items-start gap-3">
                                     <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                                    <span className="text-foreground/90">{task}</span>
+                                    <span className="text-muted-foreground">{task}</span>
                                 </li>
                             ))}
                         </ul>
@@ -109,8 +109,8 @@ export function Experience() {
             ))}
         </div>
         
-        <div className="mt-24 text-center">
-            <h3 className="text-lg font-medium text-muted-foreground">
+        <div className="mt-24">
+            <h3 className="text-center text-lg font-medium text-muted-foreground">
                 I've had the privilege to work with
             </h3>
             <div className="mt-8 flex flex-wrap justify-center items-center gap-x-12 gap-y-8">

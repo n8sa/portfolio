@@ -42,19 +42,19 @@ export function Projects() {
   const featuredImage = PlaceHolderImages.find(p => p.id === featuredProject.id);
 
   return (
-    <section id="projects" className="w-full bg-secondary/50 py-24 sm:py-32">
+    <section id="projects" className="w-full bg-secondary/20 py-24 sm:py-32">
       <div className="container">
-        <div className="mb-16 text-center">
-            <h2 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+        <div className="mb-16 max-w-3xl">
+            <h2 className="font-headline text-5xl font-bold tracking-tighter text-foreground sm:text-6xl md:text-7xl">
                 My Work
             </h2>
-            <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
+            <p className="mt-4 text-lg text-muted-foreground">
                 A selection of projects that showcase my skills and passion for building great web experiences.
             </p>
         </div>
 
         {/* Featured Project */}
-        <Card className="overflow-hidden shadow-lg transition-shadow duration-300 hover:shadow-2xl">
+        <Card className="overflow-hidden border-border bg-card/50 shadow-lg transition-shadow duration-300 hover:shadow-primary/10">
             <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="relative aspect-video md:aspect-auto">
                     {featuredImage && (
@@ -63,19 +63,19 @@ export function Projects() {
                             alt={featuredImage.description}
                             data-ai-hint={featuredImage.imageHint}
                             fill
-                            className="object-cover"
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                     )}
                 </div>
                 <div className="flex flex-col justify-center p-8 md:p-12">
-                    <Badge className="w-fit">Featured Project</Badge>
+                    <Badge className="w-fit bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">Featured Project</Badge>
                     <h3 className="mt-4 font-headline text-3xl font-bold">{featuredProject.title}</h3>
                     <p className="mt-4 text-muted-foreground">{featuredProject.description}</p>
                     <div className="mt-6 flex flex-wrap gap-2">
                         {featuredProject.tech.map(t => <Badge key={t} variant="secondary">{t}</Badge>)}
                     </div>
                     <div className="mt-8">
-                        <Button asChild size="lg">
+                        <Button asChild size="lg" className="rounded-full">
                             <Link href={featuredProject.liveUrl} target="_blank" rel="noopener noreferrer">
                                 Live Demo <ArrowUpRight className="ml-2 h-5 w-5"/>
                             </Link>
@@ -90,16 +90,16 @@ export function Projects() {
             {otherProjects.map(project => {
                 const projectImage = PlaceHolderImages.find(p => p.id === project.id);
                 return (
-                    <Card key={project.id} className="flex flex-col overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <Card key={project.id} className="group flex flex-col overflow-hidden border-border bg-card/50 transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10">
                         <CardHeader className="p-0">
-                            <div className="relative aspect-video">
+                            <div className="relative aspect-video overflow-hidden">
                                 {projectImage && (
                                      <Image 
                                         src={projectImage.imageUrl}
                                         alt={project.title}
                                         data-ai-hint={projectImage.imageHint}
                                         fill
-                                        className="object-cover"
+                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                                     />
                                 )}
                             </div>
@@ -112,7 +112,7 @@ export function Projects() {
                              <div className="flex flex-wrap gap-2">
                                 {project.tech.map(t => <Badge key={t} variant="secondary">{t}</Badge>)}
                             </div>
-                            <Button variant="outline" className="w-full mt-4" asChild>
+                            <Button variant="outline" className="w-full mt-4 rounded-full" asChild>
                                 <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                                     View Details <ArrowUpRight className="ml-2 h-4 w-4"/>
                                 </Link>
