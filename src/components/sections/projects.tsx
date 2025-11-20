@@ -5,14 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ArrowUpRight } from "lucide-react";
-
-const featuredProject = {
-  id: "kuiz-belanjawan-2026",
-  title: "Kuiz Belanjawan 2026",
-  description: "Interactive quiz microsite for Astro Awani's 'Belanjawan 2026' coverage. Features client-side quiz logic, sessionStorage for state management, and integration with an AI-powered CMS.",
-  tech: ["HTML", "CSS", "JavaScript", "PHP"],
-  liveUrl: "https://pulse.astroawani.com/kuiz-belanjawan-2026",
-};
+import { AiHighlighter } from "../ai-highlighter";
 
 const otherProjects = [
     {
@@ -39,7 +32,6 @@ const otherProjects = [
 ];
 
 export function Projects() {
-  const featuredImage = PlaceHolderImages.find(p => p.id === featuredProject.id);
 
   return (
     <section id="projects" className="w-full bg-secondary/20 py-24 sm:py-32">
@@ -54,36 +46,7 @@ export function Projects() {
         </div>
 
         {/* Featured Project */}
-        <Card className="overflow-hidden border-border bg-card/50 shadow-lg transition-shadow duration-300 hover:shadow-primary/10">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="relative aspect-video md:aspect-auto">
-                    {featuredImage && (
-                        <Image 
-                            src={featuredImage.imageUrl}
-                            alt={featuredImage.description}
-                            data-ai-hint={featuredImage.imageHint}
-                            fill
-                            className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                    )}
-                </div>
-                <div className="flex flex-col justify-center p-8 md:p-12">
-                    <Badge className="w-fit bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">Featured Project</Badge>
-                    <h3 className="mt-4 font-headline text-3xl font-bold">{featuredProject.title}</h3>
-                    <p className="mt-4 text-muted-foreground">{featuredProject.description}</p>
-                    <div className="mt-6 flex flex-wrap gap-2">
-                        {featuredProject.tech.map(t => <Badge key={t} variant="secondary">{t}</Badge>)}
-                    </div>
-                    <div className="mt-8">
-                        <Button asChild size="lg" className="rounded-full">
-                            <Link href={featuredProject.liveUrl} target="_blank" rel="noopener noreferrer">
-                                Live Demo <ArrowUpRight className="ml-2 h-5 w-5"/>
-                            </Link>
-                        </Button>
-                    </div>
-                </div>
-            </div>
-        </Card>
+        <AiHighlighter />
 
         {/* Other Projects */}
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -114,7 +77,7 @@ export function Projects() {
                             </div>
                             <Button variant="outline" className="w-full mt-4 rounded-full" asChild>
                                 <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                                    View Details <ArrowUpRight className="ml-2 h-4 w-4"/>
+                                    {project.liveUrl === "#" ? "View Details" : "Live Demo"} <ArrowUpRight className="ml-2 h-4 w-4"/>
                                 </Link>
                             </Button>
                         </CardFooter>
