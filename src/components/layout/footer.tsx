@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Github, Linkedin, Twitter } from "lucide-react";
-import { VisitorCounter } from "@/components/visitor-counter";
 import { Button } from "@/components/ui/button";
 
 export function Footer() {
@@ -17,7 +16,6 @@ export function Footer() {
             </p>
           </div>
           <div className="flex flex-col items-center gap-4">
-            <VisitorCounter />
             <div className="flex items-center gap-2">
                 <Button variant="ghost" size="icon" asChild>
                     <Link href="#" target="_blank" rel="noopener noreferrer">
