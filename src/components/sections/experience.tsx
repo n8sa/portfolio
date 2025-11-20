@@ -115,7 +115,7 @@ export function Experience() {
             </h3>
             <div className="mt-8 flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
                 {companies.map((company) => (
-                    <div key={company.name} className="relative h-10 w-40 grayscale transition-all duration-300 hover:grayscale-0">
+                    <div key={company.name} className="relative h-10 w-40 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100">
                         <Image
                             src={company.logo}
                             alt={company.name}
