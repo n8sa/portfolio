@@ -1,11 +1,13 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Briefcase, CheckCircle } from "lucide-react";
+import Image from "next/image";
 
 const workExperience = [
     {
         company: "Astro Awani Network",
         role: "Digital Tech Apprentice",
         duration: "Aug 2023 - Current",
+        logo: "/logos/astro-awani.svg",
         responsibilities: [
             "Spearheaded the development and maintenance of web applications using React, Next.js, and Node.js, resulting in a 20% increase in user engagement.",
             "Integrated AI-powered content generation features into the company's CMS, reducing content creation time by 30%.",
@@ -22,6 +24,7 @@ const workExperience = [
         company: "Fujitsu System Global Solution Sdn Bhd",
         role: "System Engineer",
         duration: "Feb 2022 - Apr 2025",
+        logo: "/logos/fujitsu.svg",
         responsibilities: [
             "Deployed and configured 10+ Azure Virtual Machines (Windows Server 2016/2019/2022 with Japanese locale).",
             "Streamlined deployments by 15% through efficient resource group setup and server parameter tuning.",
@@ -36,6 +39,7 @@ const workExperience = [
         company: "Parkson Credit Sdn Bhd",
         role: "Software Engineer",
         duration: "Sep 2021 - Feb 2022",
+        logo: "/logos/parkson-credit.svg",
         responsibilities: [
             "Redesigned UI for enterprise web system using React.js and Ant Design, improving load times by 30% and user satisfaction.",
             "Developed standardized layout components, resulting in 50% faster feature deployments.",
@@ -47,6 +51,7 @@ const workExperience = [
         company: "Petronas Digital Sdn Bhd",
         role: "Software Engineer (Internship)",
         duration: "May 2021 – Aug 2021",
+        logo: "/logos/petronas-digital.svg",
         responsibilities: [
             "Built a performance monitoring dashboard using React.js, HTML & CSS, enabling senior leaders to track 5+ teams in real-time.",
             "Used Postman to create and test APIs linking the dashboard with backend services.",
@@ -55,6 +60,13 @@ const workExperience = [
         ]
     }
 ];
+
+const companies = [
+    { name: "Astro Awani", logo: "/logos/astro-awani.svg" },
+    { name: "Fujitsu", logo: "/logos/fujitsu.svg" },
+    { name: "Petronas Digital", logo: "/logos/petronas-digital.svg" },
+    { name: "Parkson Credit", logo: "/logos/parkson-credit.svg" },
+]
 
 export function Experience() {
   return (
@@ -95,6 +107,24 @@ export function Experience() {
                     </CardContent>
                 </Card>
             ))}
+        </div>
+        
+        <div className="mt-24 text-center">
+            <h3 className="text-lg font-medium text-muted-foreground">
+                I've had the privilege to work with
+            </h3>
+            <div className="mt-8 flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+                {companies.map((company) => (
+                    <div key={company.name} className="relative h-10 w-40 grayscale transition-all duration-300 hover:grayscale-0">
+                        <Image
+                            src={company.logo}
+                            alt={company.name}
+                            fill
+                            className="object-contain"
+                        />
+                    </div>
+                ))}
+            </div>
         </div>
       </div>
     </section>
