@@ -1,8 +1,6 @@
-import { ArrowDown } from "lucide-react";
-
 export function Hero() {
   return (
-    <section id="home" className="flex h-screen w-full flex-col justify-center bg-background">
+    <section id="home" className="flex h-full w-full flex-col justify-center items-center">
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-4xl text-center">
           <div className="animate-fade-in-up">
@@ -21,9 +19,6 @@ export function Hero() {
             </p>
           </div>
         </div>
-      </div>
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <ArrowDown className="h-6 w-6 text-primary" />
       </div>
     </section>
   );

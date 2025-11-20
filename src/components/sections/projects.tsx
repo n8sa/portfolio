@@ -33,11 +33,11 @@ const projects = [
 
 export function Projects() {
   return (
-    <section id="projects" className="w-full bg-background py-24 sm:py-32">
+    <section id="projects" className="w-full bg-background py-24 sm:py-32 flex justify-center items-center h-full">
       <div className="container">
         <div className="mb-16 text-center">
             <h2 className="font-headline text-5xl font-bold tracking-tighter text-foreground sm:text-6xl md:text-7xl">
-                More Projects
+                Projects
             </h2>
         </div>
 

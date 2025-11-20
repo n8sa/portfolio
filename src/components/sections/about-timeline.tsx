@@ -5,12 +5,12 @@ import { cn } from "@/lib/utils";
 
 const timelineData = [
   {
-    id: "2025-present",
+    id: "2023-present",
     year: "Aug 2023 - Present",
     sentence: "Exploring digital innovation at Astro Awani — building fast web experiences and integrating AI into workflows.",
   },
   {
-    id: "2022-2025",
+    id: "2022-2023",
     year: "2022 - 2023",
     sentence: "Engineering cloud and automation solutions at Fujitsu — solving meaningful problems.",
   },
@@ -30,7 +30,7 @@ export function AboutTimeline() {
   const [activeYearId, setActiveYearId] = useState(timelineData[0].id);
 
   return (
-    <section id="about" className="w-full bg-background py-24 sm:py-32">
+    <section id="about" className="w-full bg-background py-24 sm:py-32 flex justify-center items-center h-full">
       <div className="container">
         <div className="mx-auto grid max-w-5xl grid-cols-1 items-start gap-12 lg:grid-cols-3 lg:gap-24">
           <div className="lg:col-span-1">
