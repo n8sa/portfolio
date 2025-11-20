@@ -35,7 +35,7 @@ export function Hero() {
           </div>
         </div>
         <div className="relative flex justify-center lg:justify-end">
-          <Card className="w-80 max-w-full overflow-hidden rounded-2xl border-4 border-primary/20 shadow-2xl transition-transform duration-300 hover:scale-105 hover:shadow-primary/20 lg:w-96">
+          <Card className="w-80 max-w-full overflow-hidden rounded-2xl border-4 border-primary/10 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-primary/20 lg:w-96">
             <CardContent className="p-0">
               {profileImage && (
                 <Image

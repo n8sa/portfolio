@@ -70,7 +70,7 @@ const companies = [
 
 export function Experience() {
   return (
-    <section id="experience" className="w-full bg-card py-24 sm:py-32">
+    <section id="experience" className="w-full bg-background py-24 sm:py-32">
       <div className="container">
         <div className="mb-16 text-center">
             <h2 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
@@ -83,7 +83,7 @@ export function Experience() {
 
         <div className="mx-auto max-w-4xl space-y-8">
             {workExperience.map((job, index) => (
-                <Card key={index} className="overflow-hidden">
+                <Card key={index} className="overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl">
                     <CardHeader>
                         <div className="flex items-start justify-between">
                             <div>

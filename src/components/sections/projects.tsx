@@ -42,7 +42,7 @@ export function Projects() {
   const featuredImage = PlaceHolderImages.find(p => p.id === featuredProject.id);
 
   return (
-    <section id="projects" className="w-full bg-background py-24 sm:py-32">
+    <section id="projects" className="w-full bg-secondary/50 py-24 sm:py-32">
       <div className="container">
         <div className="mb-16 text-center">
             <h2 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
@@ -54,7 +54,7 @@ export function Projects() {
         </div>
 
         {/* Featured Project */}
-        <Card className="overflow-hidden shadow-lg transition-shadow hover:shadow-2xl">
+        <Card className="overflow-hidden shadow-lg transition-shadow duration-300 hover:shadow-2xl">
             <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="relative aspect-video md:aspect-auto">
                     {featuredImage && (
@@ -90,7 +90,7 @@ export function Projects() {
             {otherProjects.map(project => {
                 const projectImage = PlaceHolderImages.find(p => p.id === project.id);
                 return (
-                    <Card key={project.id} className="flex flex-col overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <Card key={project.id} className="flex flex-col overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
                         <CardHeader className="p-0">
                             <div className="relative aspect-video">
                                 {projectImage && (
