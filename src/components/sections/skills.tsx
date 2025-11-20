@@ -5,19 +5,19 @@ import { Code, Database, Cloud, Cog } from "lucide-react";
 const skills = {
   "Frontend": {
     icon: <Code className="h-6 w-6 text-primary" />,
-    items: ["React", "Next.js", "HTML5", "CSS3", "Tailwind CSS", "JavaScript", "TypeScript"]
+    items: ["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind CSS"]
   },
   "Backend": {
     icon: <Database className="h-6 w-6 text-primary" />,
-    items: ["Node.js", "Firebase Functions", "PHP", "REST APIs"]
+    items: ["Node.js", "Express", "PHP", "Firebase"]
   },
-  "Cloud & DevOps": {
+  "Cloud & Database": {
     icon: <Cloud className="h-6 w-6 text-primary" />,
-    items: ["Firebase", "Google Cloud", "CI/CD", "Vercel"]
+    items: ["Azure", "GCP", "AWS", "MySQL", "PostgreSQL"]
   },
   "Tools & Other": {
     icon: <Cog className="h-6 w-6 text-primary" />,
-    items: ["Git", "GitHub", "SendGrid", "CMS Integration", "Accessibility (WCAG)"]
+    items: ["Git", "GitHub", "Jira", "Figma", "CI/CD", "Docker"]
   }
 };
 

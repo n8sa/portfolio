@@ -5,6 +5,8 @@ import { About } from '@/components/sections/about';
 import { Projects } from '@/components/sections/projects';
 import { Skills } from '@/components/sections/skills';
 import { Contact } from '@/components/sections/contact';
+import { Experience } from '@/components/sections/experience';
+import { Education } from '@/components/sections/education';
 
 export default function Home() {
   return (
@@ -13,8 +15,10 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <About />
+        <Experience />
         <Projects />
         <Skills />
+        <Education />
         <Contact />
       </main>
       <Footer />

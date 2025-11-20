@@ -16,6 +16,13 @@ const featuredProject = {
 
 const otherProjects = [
     {
+        id: "project-azure-vm",
+        title: "Azure VM Deployment",
+        description: "Deploy a Windows 10 Virtual Machine on Microsoft Azure. Configure the virtual network, network security group, and public IP address for remote desktop access. Document the process from resource group creation to successful RDP connection.",
+        tech: ["Azure", "Virtual Machine", "Networking", "RDP"],
+        liveUrl: "https://n8sa.github.io/farahPortfolio/Azure-VM-Deployment.pdf",
+    },
+    {
         id: "project-ramadan",
         title: "AWANI Ramadan Microsite",
         description: "A comprehensive microsite for Ramadan with dynamic content and interactive features.",
@@ -79,7 +86,7 @@ export function Projects() {
         </Card>
 
         {/* Other Projects */}
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {otherProjects.map(project => {
                 const projectImage = PlaceHolderImages.find(p => p.id === project.id);
                 return (
@@ -99,15 +106,15 @@ export function Projects() {
                         </CardHeader>
                         <CardContent className="flex-1 p-6">
                             <h4 className="font-headline text-xl font-bold">{project.title}</h4>
-                            <p className="mt-2 text-muted-foreground">{project.description}</p>
+                            <p className="mt-2 text-muted-foreground text-sm">{project.description}</p>
                         </CardContent>
                         <CardFooter className="flex flex-col items-start gap-4 p-6 pt-0">
                              <div className="flex flex-wrap gap-2">
                                 {project.tech.map(t => <Badge key={t} variant="secondary">{t}</Badge>)}
                             </div>
-                            <Button variant="outline" className="w-full" asChild>
-                                <Link href={project.liveUrl}>
-                                    View Details
+                            <Button variant="outline" className="w-full mt-4" asChild>
+                                <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                                    View Details <ArrowUpRight className="ml-2 h-4 w-4"/>
                                 </Link>
                             </Button>
                         </CardFooter>
