@@ -1,26 +1,6 @@
 "use server";
 
-import { getAiCopySuggestions } from '@/ai/flows/ai-copy-suggestions';
 import { contactFormSchema } from '@/lib/schemas';
-
-/**
- * Calls the Genkit AI flow to get suggestions for refining a project description.
- * @param description The project description to refine.
- * @returns An object with success status and either suggestions or an error message.
- */
-export async function generateSuggestions(description: string) {
-  if (!description) {
-    return { success: false, error: "Description cannot be empty." };
-  }
-
-  try {
-    const suggestions = await getAiCopySuggestions(description);
-    return { success: true, suggestions };
-  } catch (error) {
-    console.error("AI suggestion error:", error);
-    return { success: false, error: "Failed to generate AI suggestions." };
-  }
-}
 
 /**
  * Handles the submission of the contact form.
