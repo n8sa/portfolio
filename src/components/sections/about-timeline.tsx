@@ -6,12 +6,12 @@ import { cn } from "@/lib/utils";
 const timelineData = [
   {
     id: "2025-present",
-    year: "2025 - Present",
+    year: "Aug 2023 - Present",
     sentence: "Exploring digital innovation at Astro Awani — building fast web experiences and integrating AI into workflows.",
   },
   {
     id: "2022-2025",
-    year: "2022 - 2025",
+    year: "2022 - 2023",
     sentence: "Engineering cloud and automation solutions at Fujitsu — solving meaningful problems.",
   },
   {
@@ -21,7 +21,7 @@ const timelineData = [
   },
   {
     id: "2021",
-    year: "2021",
+    year: "May 2021 - Aug 2021",
     sentence: "Starting my journey at Petronas Digital.",
   },
 ];
