@@ -100,7 +100,7 @@ export function AboutSection() {
         {/* FARAH Hero */}
         <div className="farah-text-container">
           <motion.h1 
-            className={`select-none text-[25vw] sm:text-[28vw] md:text-[30vw] lg:text-[22vw] font-black leading-none tracking-tighter flex transition-colors duration-1000 ease-in-out ${selectedPhaseData?.colors || 'text-neutral-400'}`}
+            className={`select-none text-[22vw] sm:text-[25vw] md:text-[28vw] lg:text-[20vw] font-black leading-none tracking-tighter flex transition-colors duration-1000 ease-in-out ${selectedPhaseData?.colors || 'text-neutral-400'}`}
             >
             {farahLetters.map((letter, index) => (
               <span key={index} className="farah-letter-container">
