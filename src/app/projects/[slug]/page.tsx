@@ -68,6 +68,79 @@ export default function ProjectPage() {
     }
   }
 
+  const renderImages = () => {
+    if (!project.images || project.images.length === 0) {
+      return null;
+    }
+
+    // New layout for exactly two images
+    if (project.images.length === 2) {
+      return (
+        <motion.div
+          variants={rightColVariants}
+          className="grid grid-cols-1 grid-rows-1 gap-4 md:relative md:h-[450px]"
+        >
+          {project.images.map((img, index) => (
+            <motion.div
+              key={index}
+              className="w-full overflow-hidden rounded-lg shadow-2xl md:absolute md:w-[75%]"
+              style={{
+                zIndex: 2 - index,
+                top: `${index * 20}%`,
+                left: `${index * 15}%`,
+                rotate: `${index === 0 ? -2 : 5}deg`,
+              }}
+              variants={imageHoverVariants}
+              whileHover="hover"
+            >
+              <Image
+                src={img.url}
+                alt={img.alt}
+                width={800}
+                height={600}
+                className="aspect-[4/3] h-full w-full object-cover"
+                data-ai-hint={img.hint}
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+      );
+    }
+
+    // Original layout for 1 or 3+ images
+    return (
+      <motion.div
+        variants={rightColVariants}
+        className="grid grid-cols-2 gap-4 md:relative md:mt-0 md:h-[450px]"
+      >
+        {project.images.slice(0, 3).map((img, index) => (
+          <motion.div
+            key={index}
+            className="w-full overflow-hidden rounded-lg shadow-2xl md:absolute md:w-[80%]"
+            style={{
+              zIndex: 3 - index,
+              top: `${index * 15}%`,
+              left: `${index * 5}%`,
+              rotate: `${(index - 1) * 4}deg`,
+            }}
+            variants={imageHoverVariants}
+            whileHover="hover"
+          >
+            <Image
+              src={img.url}
+              alt={img.alt}
+              width={800}
+              height={600}
+              className="aspect-[4/3] h-full w-full object-cover"
+              data-ai-hint={img.hint}
+            />
+          </motion.div>
+        ))}
+      </motion.div>
+    );
+  };
+
+
   return (
     <motion.main
       initial="hidden"
@@ -127,37 +200,7 @@ export default function ProjectPage() {
                 </motion.div>
 
                 {/* Right Column */}
-                {project.images && project.images.length > 0 && (
-                  <motion.div
-                    variants={rightColVariants}
-                    className="grid grid-cols-2 gap-4 md:relative md:mt-0 md:h-[450px]"
-                  >
-                    {project.images.slice(0, 3).map((img, index) => (
-                      <motion.div
-                        key={index}
-                        className="w-full overflow-hidden rounded-lg shadow-2xl md:absolute md:w-[80%]"
-                        style={{
-                          // Desktop-only styles for stacking
-                          zIndex: 3 - index,
-                          top: `${index * 15}%`,
-                          left: `${index * 5}%`,
-                          rotate: `${(index - 1) * 4}deg`,
-                        }}
-                        variants={imageHoverVariants}
-                        whileHover="hover"
-                      >
-                        <Image
-                          src={img.url}
-                          alt={img.alt}
-                          width={800}
-                          height={600}
-                          className="aspect-[4/3] h-full w-full object-cover"
-                          data-ai-hint={img.hint}
-                        />
-                      </motion.div>
-                    ))}
-                  </motion.div>
-                )}
+                {renderImages()}
             </div>
         </div>
     </motion.main>

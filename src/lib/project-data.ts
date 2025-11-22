@@ -48,8 +48,8 @@ export const projects: Project[] = [
         tech: ["HTML", "Tailwind CSS", "JavaScript", "GSAP", "APIs"],
         liveUrl: "#",
         images: [
-            { url: "https://picsum.photos/seed/rm-1/1200/800", alt: "Ramadan microsite hero section", hint: "islamic pattern" },
-            { url: "https://picsum.photos/seed/rm-2/1200/800", alt: "Ramadan microsite prayer times", hint: "mobile app" },
+            { url: "/images/ramadan1.png", alt: "Ramadan microsite hero section", hint: "islamic pattern" },
+            { url: "/images/ramadan2.png", alt: "Ramadan microsite prayer times", hint: "mobile app" },
         ]
     },
     {
@@ -66,8 +66,8 @@ export const projects: Project[] = [
         tech: ["PHP", "JavaScript", "OpenAI API", "HTML/CSS"],
         liveUrl: "#",
         images: [
-            { url: "https://picsum.photos/seed/ai-1/1200/800", alt: "AI content generator interface", hint: "dashboard ui" },
-            { url: "https://picsum.photos/seed/ai-2/1200/800", alt: "Generated content example", hint: "text editor" },
+            { url: "/images/ai1.png", alt: "AI content generator interface", hint: "dashboard ui" },
+            { url: "/images/ai2.png", alt: "Generated content example", hint: "text editor" },
         ]
     },
     {
@@ -84,8 +84,8 @@ export const projects: Project[] = [
         tech: ["Next.js", "React", "Tailwind CSS", "Node.js", "API Integration"],
         liveUrl: "#",
         images: [
-            { url: "https://picsum.photos/seed/octo-1/1200/800", alt: "Octopost dashboard view", hint: "dashboard analytics" },
-            { url: "https://picsum.photos/seed/octo-2/1200/800", alt: "Octopost content scheduling UI", hint: "content calendar" },
+            { url: "/images/Octo1.png", alt: "Octopost dashboard view", hint: "dashboard analytics" },
+            { url: "/images/Octo2.png", alt: "Octopost content scheduling UI", hint: "content calendar" },
         ]
     }
 ];
