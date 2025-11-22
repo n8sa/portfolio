@@ -49,11 +49,9 @@ export function Projects() {
         </motion.h2>
         {projects.map((project) => (
           <motion.div key={project.slug} variants={itemVariants}>
-            <Link href={`/projects/${project.slug}`} legacyBehavior>
-              <a className="group relative my-2 block cursor-pointer py-2 text-4xl font-bold text-foreground transition-all duration-300 ease-in-out hover:text-primary md:my-3 md:text-6xl md:tracking-tighter">
-                <span className="relative z-10">{project.title}</span>
-                <span className="absolute left-1/2 top-1/2 z-0 h-full w-0 -translate-x-1/2 -translate-y-1/2 bg-primary/10 transition-all duration-300 ease-in-out group-hover:w-full"></span>
-              </a>
+            <Link href={`/projects/${project.slug}`} className="group relative my-2 block cursor-pointer py-2 text-4xl font-bold text-foreground transition-all duration-300 ease-in-out hover:text-primary md:my-3 md:text-6xl md:tracking-tighter">
+              <span className="relative z-10">{project.title}</span>
+              <span className="absolute left-1/2 top-1/2 z-0 h-full w-0 -translate-x-1/2 -translate-y-1/2 bg-primary/10 transition-all duration-300 ease-in-out group-hover:w-full"></span>
             </Link>
           </motion.div>
         ))}
