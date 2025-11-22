@@ -18,7 +18,6 @@ const phases = [
     title: 'Phase 2',
     period: '2020 – 2024',
     content: 'The years I transformed knowledge into real skill. I strengthened my technical abilities in enterprise environments involving automation, Azure, backend development, and infrastructure support. My experience with Fujitsu, Parkson, and Petronas Digital opened my eyes to complex systems, operational needs, and real-world problem solving. I grew into someone who can adapt, build with intention, and deliver with clarity.',
-    logos: ['/fujitsu-logo.svg', '/parkson-logo.svg', '/petronas-logo.svg'],
     colors: 'text-[#D8A7B1]',
   },
   {
@@ -40,39 +39,45 @@ const phases = [
 ];
 
 const panelVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20 },
   visible: { 
     opacity: 1, y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1], staggerChildren: 0.1 }
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1], staggerChildren: 0.05 }
   },
   exit: { 
-    opacity: 0, y: -20,
+    opacity: 0, y: -10,
     transition: { duration: 0.3, ease: 'easeOut' }
   }
 };
 
 const titleVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
-    exit: { opacity: 0, y: 20, transition: { duration: 0.3, ease: 'easeIn' } },
+    hidden: { opacity: 0, y: -10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
+    exit: { opacity: 0, y: 10, transition: { duration: 0.2, ease: 'easeIn' } },
 };
 
 const textVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
 };
+
+const yearMarkers = [
+  { year: '2020', left: '25%' },
+  { year: '2024', left: '50%' },
+  { year: '2025', left: '75%' },
+];
 
 export function AboutSection() {
   const [activePhase, setActivePhase] = useState(phases[0].id);
   const selectedPhaseData = phases.find(p => p.id === activePhase);
+  const activePhaseIndex = phases.findIndex(p => p.id === activePhase);
 
   const farahLetters = ['F', 'A', 'R', 'A', 'H'];
 
   return (
     <section id="about" className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-black">
-      
       <div className="relative flex flex-col items-center justify-center">
-        <div className="relative h-10 w-full">
+        <div className="relative h-8 w-full">
             <AnimatePresence mode="wait">
                  {selectedPhaseData && (
                     <motion.h3
@@ -91,7 +96,7 @@ export function AboutSection() {
 
         <div className="farah-text-container">
           <h1 
-            className={`select-none text-[15vw] sm:text-[18vw] md:text-[20vw] lg:text-[14vw] font-black leading-none tracking-tighter flex transition-colors duration-1000 ease-in-out ${selectedPhaseData?.colors || 'text-neutral-400'}`}
+            className={`select-none text-[12vw] sm:text-[15vw] md:text-[17vw] lg:text-[12vw] font-black leading-none tracking-tighter flex transition-colors duration-1000 ease-in-out ${selectedPhaseData?.colors || 'text-neutral-400'}`}
           >
             {farahLetters.map((letter, index) => (
               <span key={index} className="relative">
@@ -130,19 +135,39 @@ export function AboutSection() {
         </div>
       </div>
       
-      <div className="absolute bottom-16 left-0 right-0 z-20 flex w-full max-w-2xl mx-auto px-4">
+      <div className="absolute bottom-16 left-0 right-0 z-20 w-full max-w-2xl mx-auto px-4">
         <div className="relative w-full">
-          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-neutral-700"></div>
+            {/* Year markers */}
+            {yearMarkers.map(marker => (
+                <div 
+                    key={marker.year} 
+                    className="absolute -top-5 text-neutral-500 text-[10px] font-medium -translate-x-1/2"
+                    style={{ left: marker.left }}
+                >
+                    {marker.year}
+                </div>
+            ))}
+          
+          <div className="absolute top-0 left-0 w-full h-0.5 bg-neutral-700"></div>
+          
+          <div 
+            className="absolute top-0 h-0.5 bg-primary/30 transition-all duration-500 ease-in-out"
+            style={{
+              left: 0,
+              width: `${(activePhaseIndex / (phases.length - 1)) * 100}%`
+            }}
+          ></div>
+
           <div className="relative flex justify-between w-full">
-            {phases.map((phase, index) => (
+            {phases.map((phase) => (
               <div key={phase.id} className="flex flex-col items-center">
                 <button
                   onClick={() => setActivePhase(phase.id)}
-                  className="relative z-10 flex flex-col items-center group"
+                  className="relative z-10 flex flex-col items-center group p-2 -m-2"
                 >
                   <div className={`
-                    absolute -top-1 h-2 w-0.5 transition-all duration-300
-                    ${activePhase === phase.id ? 'bg-primary shadow-[0_0_8px_theme(colors.primary)] h-3' : 'bg-neutral-500'}
+                    absolute top-0 h-2 w-0.5 transition-all duration-300
+                    ${activePhase === phase.id ? 'bg-primary shadow-[0_0_8px_theme(colors.primary)] h-3 -translate-y-0.5' : 'bg-neutral-500'}
                   `}></div>
                   <span className={`
                     mt-4 text-xs font-medium transition-colors duration-300
@@ -156,6 +181,7 @@ export function AboutSection() {
           </div>
         </div>
       </div>
+
     </section>
   );
 }
