@@ -15,19 +15,19 @@
     {
       "id": "project-kuiz-belanjawan-1",
       "description": "Kuiz Belanjawan main screen",
-      "imageUrl": "https://images.unsplash.com/photo-1519222970733-f546218fa6d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3ZWJzaXRlJTIwbW9ja3VwfGVufDB8fHx8MTc2MzgyOTI0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1558174685-430919a96c8d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3ZWJzaXRlJTIwbW9ja3VwfGVufDB8fHx8MTc2MzgyOTI0MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "website mockup"
     },
     {
       "id": "project-kuiz-belanjawan-2",
       "description": "Kuiz Belanjawan UI flow",
-      "imageUrl": "https://images.unsplash.com/photo-1735399976112-17508533c97a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxxdWl6JTIwaW50ZXJmYWNlfGVufDB8fHx8MTc2Mzc0MDg0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1750041888982-67a58e6c9014?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxxdWl6JTIwaW50ZXJmYWNlfGVufDB8fHx8MTc2Mzc0MDg0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "quiz interface"
     },
     {
       "id": "project-ramadan-1",
       "description": "Ramadan microsite hero section",
-      "imageUrl": "https://images.unsplash.com/photo-1531165424588-80b93de6f807?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpc2xhbWljJTIwcGF0dGVybnxlbnwwfHx8fDE3NjM3NTM3OTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1550867571-6d0bc79eb6f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpc2xhbWljJTIwcGF0dGVybnxlbnwwfHx8fDE3NjM3NTM3OTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "islamic pattern"
     },
     {
@@ -39,37 +39,37 @@
     {
       "id": "project-ai-cms-1",
       "description": "AI content generator interface",
-      "imageUrl": "https://images.unsplash.com/photo-1635183607544-bf69187cc310?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkYXNoYm9hcmQlMjB1aXxlbnwwfHx8fDE3NjM3NjYwODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYXNoYm9hcmQlMjB1aXxlbnwwfHx8fDE3NjM3NjYwODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "dashboard ui"
     },
     {
       "id": "project-ai-cms-2",
       "description": "Generated content example",
-      "imageUrl": "https://images.unsplash.com/photo-1547860664-b8537ca5f833?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0ZXh0JTIwZWRpdG9yfGVufDB8fHx8MTc2MzgyOTI0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1625535069703-a67ae00bd6de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0ZXh0JTIwZWRpdG9yfGVufDB8fHx8MTc2MzgyOTI0MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "text editor"
     },
     {
       "id": "project-budget-calculator-1",
       "description": "Budget calculator step 1",
-      "imageUrl": "https://images.unsplash.com/photo-1762340277682-abb579ffa03c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmb3JtJTIwaW50ZXJmYWNlfGVufDB8fHx8MTc2MzgyOTI0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1762340275877-32d64414d8aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmb3JtJTIwaW50ZXJmYWNlfGVufDB8fHx8MTc2MzgyOTI0MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "form interface"
     },
     {
       "id": "project-budget-calculator-2",
       "description": "Budget calculator results screen",
-      "imageUrl": "https://images.unsplash.com/photo-1543286386-2e659306cd6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaGFydCUyMGdyYXBofGVufDB8fHx8MTc2Mzc5NzUxOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1543286386-713bdd548da4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaGFydCUyMGdyYXBofGVufDB8fHx8MTc2Mzc5NzUxOXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "chart graph"
     },
     {
       "id": "project-portfolio-1",
       "description": "Portfolio hero section",
-      "imageUrl": "https://images.unsplash.com/photo-1729575846509-613ecbc7ee88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwd2Vic2l0ZXxlbnwwfHx8fDE3NjM3ODY4NjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1724422109078-3c837b7a66eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtaW5pbWFsaXN0JTIwd2Vic2l0ZXxlbnwwfHx8fDE3NjM3ODY4NjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "minimalist website"
     },
     {
       "id": "project-portfolio-2",
       "description": "Portfolio about section",
-      "imageUrl": "https://images.unsplash.com/photo-1666855139553-4fd9bc6a1ed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx0aW1lbGluZSUyMGRlc2lnbnxlbnwwfHx8fDE3NjM4MjkyNDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1641567374010-07f12d41da86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dGltZWxpbmUlMjBkZXNpZ258ZW58MHx8fHwxNzYzODI5MjQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "timeline design"
     }
   ]

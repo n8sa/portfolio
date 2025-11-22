@@ -62,7 +62,7 @@ export default function ProjectPage() {
         <motion.div variants={containerVariants} className="flex flex-col gap-16">
             <motion.div variants={itemVariants}>
                 <Link
-                href="/#projects"
+                href="/?section=projects"
                 className="group flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
                 <motion.div whileHover={{ x: -4 }} transition={{ type: 'spring', stiffness: 300 }}>
