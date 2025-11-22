@@ -41,12 +41,6 @@ export function Projects() {
         viewport={{ once: true, amount: 0.2 }}
         className="text-center"
       >
-        <motion.h2
-            variants={itemVariants}
-            className="mb-16 font-headline text-5xl font-bold tracking-tighter text-foreground sm:text-6xl md:text-7xl"
-        >
-            Projects
-        </motion.h2>
         {projects.map((project) => (
           <motion.div key={project.slug} variants={itemVariants}>
             <Link href={`/projects/${project.slug}`} className="group relative my-2 block cursor-pointer py-2 text-4xl font-bold text-foreground transition-all duration-300 ease-in-out hover:text-primary md:my-3 md:text-6xl md:tracking-tighter">
