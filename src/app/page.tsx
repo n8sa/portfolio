@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Hero } from '@/components/sections/hero';
 import { Contact } from '@/components/sections/contact';
@@ -13,6 +13,13 @@ type SectionId = 'home' | 'about' | 'projects' | 'contact';
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<SectionId>('home');
+
+  useEffect(() => {
+    const hash = window.location.hash.substring(1);
+    if (hash === 'projects') {
+      setActiveSection('projects');
+    }
+  }, []);
 
   const sectionVariants = {
     hidden: { opacity: 0, transition: { duration: 0.5, ease: 'easeInOut' } },

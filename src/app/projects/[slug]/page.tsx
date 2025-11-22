@@ -53,11 +53,11 @@ export default function ProjectPage() {
         <motion.div variants={containerVariants} className="flex flex-col gap-12">
             <motion.div variants={itemVariants}>
                 <Link
-                href="/"
+                href="/#projects"
                 className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
                 <ArrowLeft className="h-4 w-4" />
-                Back to Home
+                Back to Projects
                 </Link>
             </motion.div>
 
