@@ -99,42 +99,15 @@ export function AboutSection() {
 
         {/* FARAH Hero */}
         <div className="farah-text-container">
-          <motion.h1 
-            className={`select-none text-[22vw] sm:text-[25vw] md:text-[28vw] lg:text-[20vw] font-black leading-none tracking-tighter flex transition-colors duration-1000 ease-in-out ${selectedPhaseData?.colors || 'text-neutral-400'}`}
+          <h1 
+            className={`select-none text-[20vw] sm:text-[22vw] md:text-[25vw] lg:text-[18vw] font-black leading-none tracking-tighter flex transition-colors duration-1000 ease-in-out ${selectedPhaseData?.colors || 'text-neutral-400'}`}
             >
             {farahLetters.map((letter, index) => (
               <span key={index} className="farah-letter-container">
                 {letter}
-                  {/* Phase 1 Icon */}
-                  {activePhase === 'phase-1' && index === 0 && (
-                    <div
-                      key="grad-cap"
-                      className="absolute -top-[5%] -left-[10%] text-neutral-300"
-                    >
-                      <GraduationCap size="20%" />
-                    </div>
-                  )}
-                  {/* Phase 2 Icon */}
-                  {activePhase === 'phase-2' && index === 1 && (
-                     <div
-                      key="wrench"
-                      className="absolute -bottom-[5%] -right-[15%] text-neutral-300"
-                    >
-                      <Wrench size="12%" />
-                    </div>
-                  )}
-                  {/* Phase 3 Icon */}
-                   {activePhase === 'phase-3' && index === 2 && (
-                     <div
-                      key="ship"
-                      className="absolute -top-[10%] left-0 w-full text-neutral-300"
-                    >
-                         <Ship size="15%" />
-                    </div>
-                  )}
               </span>
             ))}
-          </motion.h1>
+          </h1>
         </div>
 
         {/* Content Panel */}
