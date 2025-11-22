@@ -15,7 +15,7 @@ const phases = [
     icons: [BookOpen, Briefcase],
     colors: 'text-[#D8B4A0]',
     gradient: { '--farah-grad-1': '#D8B4A0', '--farah-grad-2': '#A39788' },
-    videoUrl: 'https://cdn.pixabay.com/video/2017/10/16/12564-240183213_large.mp4',
+    videoUrl: '/study.mp4',
   },
   {
     id: 'phase-2',
