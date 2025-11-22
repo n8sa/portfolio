@@ -66,7 +66,7 @@ export function Hero() {
           }}
           className="relative inline-block"
         >
-          <h1 className="font-headline text-5xl font-bold tracking-tight text-foreground sm:text-7xl md:text-8xl">
+          <h1 className="relative z-10 font-headline text-5xl font-bold tracking-tight text-foreground sm:text-7xl md:text-8xl">
             Farah Nisa Syahindah
           </h1>
           <motion.div 
