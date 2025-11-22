@@ -74,7 +74,7 @@ export default function ProjectPage() {
       animate="visible"
       exit="hidden"
       variants={containerVariants}
-      className="flex h-screen w-screen flex-col items-center justify-center bg-background overflow-hidden p-8"
+      className="flex min-h-screen w-full flex-col items-center justify-center bg-background p-8 md:h-screen md:overflow-hidden"
     >
         <motion.div variants={leftColVariants} className="absolute top-8 left-8">
             <Link
@@ -88,13 +88,13 @@ export default function ProjectPage() {
             </Link>
         </motion.div>
 
-        <div className="container mx-auto max-w-6xl w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div className="container mx-auto mt-16 md:mt-0 max-w-6xl w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
                 {/* Left Column */}
                 <motion.div variants={leftColVariants} className="flex flex-col gap-8">
                     <motion.h1
                         variants={leftColVariants}
-                        className="font-headline text-5xl font-bold tracking-tighter text-foreground sm:text-6xl"
+                        className="font-headline text-4xl font-bold tracking-tighter text-foreground sm:text-5xl md:text-6xl"
                     >
                         {project.title}
                     </motion.h1>
@@ -116,7 +116,7 @@ export default function ProjectPage() {
                     </div>
 
                     {project.liveUrl && project.liveUrl !== '#' && (
-                        <motion.div variants={buttonHoverVariants} whileHover="hover">
+                        <motion.div variants={buttonHoverVariants} whileHover="hover" className="w-full sm:w-auto">
                             <Button asChild size="lg" className="rounded-full w-full sm:w-auto">
                                 <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                                 Live Demo <ArrowUpRight className="ml-2 h-4 w-4" />
@@ -128,7 +128,7 @@ export default function ProjectPage() {
 
                 {/* Right Column */}
                 {project.images && project.images.length > 0 && (
-                    <motion.div variants={rightColVariants} className="relative h-[450px] hidden md:block">
+                    <motion.div variants={rightColVariants} className="relative h-[300px] md:h-[450px] w-full mt-8 md:mt-0">
                         {project.images.slice(0, 3).map((img, index) => (
                              <motion.div
                                 key={index}
