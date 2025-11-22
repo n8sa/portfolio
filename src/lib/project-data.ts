@@ -90,20 +90,21 @@ export const projects: Project[] = [
         ]
     },
     {
-        slug: "personal-portfolio",
+        slug: "weather-dashboard",
         category: "Web App",
-        title: "PERSONAL PORTFOLIO",
-        description: "A cinematic one-page experience with static sections, bold typography, and animated transitions designed to reflect my identity and craft.",
+        title: "WEATHER DASHBOARD",
+        description: "A sleek, modern weather dashboard providing real-time weather data with a clean, intuitive interface. Features include a 5-day forecast, hourly updates, and location search.",
         features: [
-            "Full-viewport sections",
-            "FARAH timeline animation",
-            "Smooth navigation"
+            "Real-time weather data",
+            "5-day forecast",
+            "Location search",
+            "Responsive design"
         ],
-        tech: ["Next.js/React", "Tailwind", "GSAP", "Framer Motion"],
-        liveUrl: "/",
+        tech: ["Next.js", "React", "Tailwind CSS", "Weather API"],
+        liveUrl: "#",
         images: [
-             { url: "https://picsum.photos/seed/pp-1/1200/800", alt: "Portfolio hero section", hint: "minimalist website" },
-             { url: "https://picsum.photos/seed/pp-2/1200/800", alt: "Portfolio about section", hint: "timeline design" },
+             { url: "https://picsum.photos/seed/wd-1/1200/800", alt: "Weather dashboard interface", hint: "weather app" },
+             { url: "https://picsum.photos/seed/wd-2/1200/800", alt: "Weather forecast detail", hint: "forecast ui" },
         ]
     }
 ];
