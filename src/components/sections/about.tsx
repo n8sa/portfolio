@@ -57,12 +57,6 @@ const textVariants = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
 };
 
-const yearMarkers = [
-    { year: '2020', left: '25%' },
-    { year: '2024', left: '50%' },
-    { year: '2025', left: '75%' },
-  ];
-
 export function AboutSection() {
   const [activePhase, setActivePhase] = useState(phases[0].id);
   const selectedPhaseData = phases.find(p => p.id === activePhase);
@@ -115,7 +109,7 @@ export function AboutSection() {
                     >
                       <motion.p 
                           variants={textVariants}
-                          className="mt-2 max-w-2xl text-center text-sm text-neutral-300 md:text-base"
+                          className="mt-2 max-w-2xl text-center text-sm text-neutral-300 md:text-sm"
                       >
                           {selectedPhaseData.content}
                       </motion.p>
@@ -127,17 +121,6 @@ export function AboutSection() {
       
       <div className="absolute bottom-16 left-0 right-0 z-20 w-full max-w-2xl mx-auto px-4">
         <div className="relative w-full">
-            {/* Year markers */}
-            {yearMarkers.map(marker => (
-                <div 
-                    key={marker.year} 
-                    className="absolute -top-5 text-neutral-500 text-[10px] font-medium -translate-x-1/2"
-                    style={{ left: marker.left }}
-                >
-                    {marker.year}
-                </div>
-            ))}
-          
           <div className="absolute top-0 left-0 w-full h-0.5 bg-neutral-700"></div>
           
           <div 
