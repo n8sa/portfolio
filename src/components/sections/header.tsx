@@ -46,7 +46,7 @@ export function Header({ activeSection, setActiveSection }: HeaderProps) {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isOpen || activeSection !== 'home' || isProjectPage ? "bg-background/80 backdrop-blur-sm" : "bg-transparent"}`}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="#" onClick={(e) => handleLinkClick(e, 'home')} className="font-headline text-2xl font-bold text-primary">
-          FN
+          FNS
         </Link>
         
         {/* Desktop Nav */}
