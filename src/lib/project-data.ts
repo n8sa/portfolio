@@ -86,7 +86,6 @@ export const projects: Project[] = [
         images: [
             { url: "https://picsum.photos/seed/octo-1/1200/800", alt: "Octopost dashboard view", hint: "dashboard analytics" },
             { url: "https://picsum.photos/seed/octo-2/1200/800", alt: "Octopost content scheduling UI", hint: "content calendar" },
-            { url: "https://picsum.photos/seed/octo-3/1200/800", alt: "Octopost post management screen", hint: "content manager" },
         ]
     }
 ];
