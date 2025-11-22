@@ -14,7 +14,8 @@ const phases = [
     content: 'UiTM student exploring technology, learning fundamentals, and discovering my direction.',
     icons: [BookOpen, Briefcase],
     colors: 'text-[#D8B4A0]',
-    gradient: { '--farah-grad-1': '#D8B4A0', '--farah-grad-2': '#A39788' }
+    gradient: { '--farah-grad-1': '#D8B4A0', '--farah-grad-2': '#A39788' },
+    videoUrl: 'https://cdn.pixabay.com/video/2017/10/16/12564-240183213_large.mp4',
   },
   {
     id: 'phase-2',
@@ -25,7 +26,8 @@ const phases = [
     icons: [Cloud, Terminal, Server],
     logos: ['/fujitsu-logo.svg', '/parkson-logo.svg', '/petronas-logo.svg'],
     colors: 'text-[#A39788]',
-    gradient: { '--farah-grad-1': '#A39788', '--farah-grad-2': '#8A7F74' }
+    gradient: { '--farah-grad-1': '#A39788', '--farah-grad-2': '#8A7F74' },
+    videoUrl: 'https://cdn.pixabay.com/video/2020/01/21/31423-386007780_large.mp4',
   },
   {
     id: 'phase-3',
@@ -35,7 +37,8 @@ const phases = [
     content: 'Exploration, balance, and growth. Focused on health, family, travel, and upskilling in data, UI/UX, and AI.',
     icons: [Heart, Rocket, Wand2],
     colors: 'text-[#D8A7B1]',
-    gradient: { '--farah-grad-1': '#D8A7B1', '--farah-grad-2': '#C1959C' }
+    gradient: { '--farah-grad-1': '#D8A7B1', '--farah-grad-2': '#C1959C' },
+    videoUrl: 'https://cdn.pixabay.com/video/2023/02/14/149867-799497049_large.mp4',
   },
   {
     id: 'phase-4',
@@ -45,7 +48,8 @@ const phases = [
     content: 'Blending data, design, and storytelling. Building meaningful and value-driven digital experiences with creative tech.',
     icons: [Star, BarChart, Wand2],
     colors: 'text-primary',
-    gradient: { '--farah-grad-1': 'hsl(var(--primary))', '--farah-grad-2': 'hsl(var(--accent))' }
+    gradient: { '--farah-grad-1': 'hsl(var(--primary))', '--farah-grad-2': 'hsl(var(--accent))' },
+    videoUrl: 'https://cdn.pixabay.com/video/2022/10/24/135248-765005884_large.mp4',
   },
 ];
 
@@ -79,6 +83,23 @@ export function AboutSection() {
   return (
     <section id="about" className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-black">
       
+      {/* Background Videos */}
+      <div className="absolute inset-0 z-0 h-full w-full">
+        {phases.map((phase) => (
+          <video
+            key={phase.id}
+            src={phase.videoUrl}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className={`absolute top-0 left-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
+              activePhase === phase.id ? 'opacity-100' : 'opacity-0'
+            }`}
+          />
+        ))}
+      </div>
+      
       {/* Central Content Area */}
       <div className="relative flex flex-col items-center justify-center">
         {/* Top Titles */}
@@ -102,7 +123,7 @@ export function AboutSection() {
         {/* FARAH Hero */}
         <div className="farah-text-container">
           <motion.h1 
-            className="farah-text-gradient select-none text-[25vw] sm:text-[28vw] md:text-[30vw] lg:text-[22vw] font-black leading-none tracking-tighter"
+            className="farah-video-text select-none text-[25vw] sm:text-[28vw] md:text-[30vw] lg:text-[22vw] font-black leading-none tracking-tighter"
             animate={selectedPhaseData?.gradient || {}}
             transition={{duration: 0.8, ease: 'easeInOut'}}
             >
