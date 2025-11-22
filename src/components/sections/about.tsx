@@ -14,8 +14,8 @@ const phases = [
     period: '2017 – 2020',
     content: 'UiTM student exploring technology, learning fundamentals, and discovering my direction.',
     icons: [BookOpen, Briefcase],
-    colors: 'bg-[#D8B4A0]/10 border-[#D8B4A0]/50',
-    textColor: 'text-[#D8B4A0]',
+    colors: 'text-[#D8B4A0]',
+    gradient: { '--farah-grad-1': '#D8B4A0', '--farah-grad-2': '#A39788' }
   },
   {
     id: 'phase-2',
@@ -25,8 +25,8 @@ const phases = [
     content: 'System Engineer era: Fujitsu, Parkson, Petronas Digital. Focused on automation, Azure, backend, and infrastructure.',
     icons: [Cloud, Terminal, Server],
     logos: ['/fujitsu-logo.svg', '/parkson-logo.svg', '/petronas-logo.svg'],
-    colors: 'bg-[#A39788]/10 border-[#A39788]/50',
-    textColor: 'text-[#A39788]',
+    colors: 'text-[#A39788]',
+    gradient: { '--farah-grad-1': '#A39788', '--farah-grad-2': '#8A7F74' }
   },
   {
     id: 'phase-3',
@@ -35,8 +35,8 @@ const phases = [
     period: '2024 – 2025',
     content: 'Exploration, balance, and growth. Focused on health, family, travel, and upskilling in data, UI/UX, and AI.',
     icons: [Heart, Rocket, Wand2],
-    colors: 'bg-[#D8A7B1]/10 border-[#D8A7B1]/50',
-    textColor: 'text-[#D8A7B1]',
+    colors: 'text-[#D8A7B1]',
+    gradient: { '--farah-grad-1': '#D8A7B1', '--farah-grad-2': '#C1959C' }
   },
   {
     id: 'phase-4',
@@ -45,34 +45,32 @@ const phases = [
     period: '2025 →',
     content: 'Blending data, design, and storytelling. Building meaningful and value-driven digital experiences with creative tech.',
     icons: [Star, BarChart, Wand2],
-    colors: 'bg-primary/10 border-primary/50',
-    textColor: 'text-primary',
+    colors: 'text-primary',
+    gradient: { '--farah-grad-1': 'hsl(var(--primary))', '--farah-grad-2': 'hsl(var(--accent))' }
   },
 ];
 
 const panelVariants = {
-  hidden: { opacity: 0, y: 50, scale: 0.95 },
+  hidden: { opacity: 0, y: 30 },
   visible: { 
-    opacity: 1, y: 0, scale: 1,
-    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] }
+    opacity: 1, y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1], staggerChildren: 0.1 }
   },
   exit: { 
-    opacity: 0, y: -30, scale: 0.98,
+    opacity: 0, y: -20,
     transition: { duration: 0.3, ease: 'easeOut' }
   }
 };
 
+const titleVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+    exit: { opacity: 0, y: 20, transition: { duration: 0.3, ease: 'easeIn' } },
+};
+
 const textVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.1 + 0.3,
-        duration: 0.5,
-        ease: 'easeOut',
-      },
-    }),
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 };
 
 export function AboutSection() {
@@ -81,30 +79,85 @@ export function AboutSection() {
 
   return (
     <section id="about" className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-black">
-      {/* Top Titles */}
-      <div className="absolute top-8 left-0 right-0 z-20 flex justify-center gap-8 md:gap-16">
-        {phases.map((phase) => (
-          <motion.h3
-            key={phase.id}
-            animate={{ 
-                opacity: activePhase === phase.id ? 1 : 0.4,
-                scale: activePhase === phase.id ? 1.05 : 1,
-             }}
-            transition={{ duration: 0.5 }}
-            className="font-headline text-xs font-medium tracking-widest text-neutral-300"
-          >
-            {phase.superTitle}
-          </motion.h3>
-        ))}
-      </div>
+      
+      {/* Central Content Area */}
+      <div className="relative flex flex-col items-center justify-center">
+        {/* Top Titles */}
+        <div className="relative h-10 w-full">
+            <AnimatePresence mode="wait">
+                 {selectedPhaseData && (
+                    <motion.h3
+                        key={`${selectedPhaseData.id}-title`}
+                        variants={titleVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        className="absolute inset-0 text-center font-headline text-xs font-medium tracking-widest text-neutral-300"
+                    >
+                        {selectedPhaseData.superTitle}
+                    </motion.h3>
+                 )}
+            </AnimatePresence>
+        </div>
 
-      {/* FARAH Hero */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center">
+        {/* FARAH Hero */}
         <div className="farah-text-container">
-          <h1 className="farah-text-gradient select-none text-[25vw] sm:text-[28vw] md:text-[30vw] lg:text-[22vw] font-black leading-none tracking-tighter">
+          <motion.h1 
+            className="farah-text-gradient select-none text-[25vw] sm:text-[28vw] md:text-[30vw] lg:text-[22vw] font-black leading-none tracking-tighter"
+            animate={selectedPhaseData?.gradient || {}}
+            transition={{duration: 0.8, ease: 'easeInOut'}}
+            >
             FARAH
-          </h1>
+          </motion.h1>
           <GirlSilhouette activePhase={activePhase} />
+        </div>
+
+        {/* Content Panel */}
+        <div className="relative h-48 w-full">
+             <AnimatePresence mode="wait">
+                {selectedPhaseData && (
+                    <motion.div
+                    key={selectedPhaseData.id}
+                    variants={panelVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    className="absolute inset-0 flex flex-col items-center justify-start pt-4"
+                    >
+                    <motion.h4 
+                        variants={textVariants}
+                        className={`font-headline text-lg font-bold tracking-tight ${selectedPhaseData.colors}`}
+                    >
+                        {selectedPhaseData.period}
+                    </motion.h4>
+                    <motion.p 
+                        variants={textVariants}
+                        className="mt-2 max-w-lg text-center text-base text-neutral-300 md:text-lg"
+                    >
+                        {selectedPhaseData.content}
+                    </motion.p>
+                    
+                    <motion.div 
+                        variants={textVariants}
+                        className="mt-4 flex items-center gap-4">
+                        <div className="flex -space-x-1">
+                        {selectedPhaseData.icons.map((Icon, i) => (
+                            <div key={i} className={`flex h-8 w-8 items-center justify-center rounded-full border-2 border-neutral-900 bg-neutral-800/50`}>
+                                <Icon className={`h-4 w-4 ${selectedPhaseData.colors}`} />
+                            </div>
+                        ))}
+                        </div>
+                        {selectedPhaseData.logos && (
+                        <div className="flex items-center gap-4 border-l border-neutral-800 pl-4">
+                                {selectedPhaseData.logos.map((logo, i) => (
+                                    <Image key={i} src={logo} alt={`logo-${i}`} width={80} height={20} className="h-5 w-auto object-contain grayscale invert brightness-200 opacity-60" />
+                                ))}
+                        </div>
+                        )}
+                    </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
       </div>
       
@@ -123,63 +176,6 @@ export function AboutSection() {
             {phase.title}
           </button>
         ))}
-      </div>
-
-      {/* Content Panel */}
-      <div className="absolute bottom-24 left-0 right-0 z-10 flex justify-center">
-        <AnimatePresence mode="wait">
-          {selectedPhaseData && (
-            <motion.div
-              key={selectedPhaseData.id}
-              variants={panelVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              className={`w-[90%] max-w-2xl rounded-2xl border bg-black/50 p-6 shadow-2xl backdrop-blur-md md:p-8 ${selectedPhaseData.colors}`}
-            >
-              <motion.h4 
-                custom={0}
-                variants={textVariants}
-                initial="hidden"
-                animate="visible"
-                className={`font-headline text-lg font-bold tracking-tight ${selectedPhaseData.textColor}`}
-              >
-                {selectedPhaseData.period}
-              </motion.h4>
-              <motion.p 
-                custom={1}
-                variants={textVariants}
-                initial="hidden"
-                animate="visible"
-                className="mt-2 text-base text-neutral-300 md:text-lg"
-              >
-                {selectedPhaseData.content}
-              </motion.p>
-              
-              <motion.div 
-                custom={2}
-                variants={textVariants}
-                initial="hidden"
-                animate="visible"
-                className="mt-4 flex items-center gap-4">
-                <div className="flex -space-x-1">
-                  {selectedPhaseData.icons.map((Icon, i) => (
-                    <div key={i} className={`flex h-8 w-8 items-center justify-center rounded-full border-2 border-neutral-900 ${selectedPhaseData.colors}`}>
-                      <Icon className={`h-4 w-4 ${selectedPhaseData.textColor}`} />
-                    </div>
-                  ))}
-                </div>
-                {selectedPhaseData.logos && (
-                   <div className="flex items-center gap-4 border-l border-neutral-800 pl-4">
-                        {selectedPhaseData.logos.map((logo, i) => (
-                            <Image key={i} src={logo} alt={`logo-${i}`} width={80} height={20} className="h-5 w-auto object-contain grayscale invert brightness-200 opacity-60" />
-                        ))}
-                   </div>
-                )}
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
     </section>
   );
