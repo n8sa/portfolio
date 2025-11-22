@@ -128,31 +128,35 @@ export default function ProjectPage() {
 
                 {/* Right Column */}
                 {project.images && project.images.length > 0 && (
-                    <motion.div variants={rightColVariants} className="relative mt-8 h-[300px] w-full md:mt-0 md:h-[450px]">
-                        {project.images.slice(0, 3).map((img, index) => (
-                             <motion.div
-                                key={index}
-                                className="absolute w-[80%] overflow-hidden rounded-lg shadow-2xl"
-                                style={{
-                                    zIndex: 3 - index,
-                                    top: `${index * 15}%`,
-                                    left: `${index * 5}%`,
-                                    rotate: `${(index - 1) * 4}deg`
-                                }}
-                                variants={imageHoverVariants}
-                                whileHover="hover"
-                            >
-                                <Image
-                                    src={img.url}
-                                    alt={img.alt}
-                                    width={800}
-                                    height={600}
-                                    className="h-full w-full object-cover"
-                                    data-ai-hint={img.hint}
-                                />
-                            </motion.div>
-                        ))}
-                    </motion.div>
+                  <motion.div
+                    variants={rightColVariants}
+                    className="grid grid-cols-2 gap-4 md:relative md:mt-0 md:h-[450px]"
+                  >
+                    {project.images.slice(0, 3).map((img, index) => (
+                      <motion.div
+                        key={index}
+                        className="w-full overflow-hidden rounded-lg shadow-2xl md:absolute md:w-[80%]"
+                        style={{
+                          // Desktop-only styles for stacking
+                          zIndex: 3 - index,
+                          top: `${index * 15}%`,
+                          left: `${index * 5}%`,
+                          rotate: `${(index - 1) * 4}deg`,
+                        }}
+                        variants={imageHoverVariants}
+                        whileHover="hover"
+                      >
+                        <Image
+                          src={img.url}
+                          alt={img.alt}
+                          width={800}
+                          height={600}
+                          className="aspect-[4/3] h-full w-full object-cover"
+                          data-ai-hint={img.hint}
+                        />
+                      </motion.div>
+                    ))}
+                  </motion.div>
                 )}
             </div>
         </div>
