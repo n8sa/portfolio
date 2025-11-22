@@ -8,7 +8,6 @@ const phases = [
     id: 'phase-1',
     superTitle: '🌸 THE LEARNER',
     title: 'Phase 1',
-    period: '2017 – 2020',
     content: 'A foundation built on curiosity. I began as a UiTM student who wasn’t just studying, but exploring technology with genuine interest. This was the phase where I discovered my passion for problem-solving, discipline, and learning quickly. It shaped the mindset and adaptability I carry into everything I do today.',
     colors: 'text-neutral-400',
   },
@@ -16,7 +15,6 @@ const phases = [
     id: 'phase-2',
     superTitle: '🔧 THE BUILDER',
     title: 'Phase 2',
-    period: '2020 – 2024',
     content: 'The years I transformed knowledge into real skill. I strengthened my technical abilities in enterprise environments involving automation, Azure, backend development, and infrastructure support. My experience with Fujitsu, Parkson, and Petronas Digital opened my eyes to complex systems, operational needs, and real-world problem solving. I grew into someone who can adapt, build with intention, and deliver with clarity.',
     colors: 'text-[#D8A7B1]',
   },
@@ -24,7 +22,6 @@ const phases = [
     id: 'phase-3',
     superTitle: '🌍 THE SEEKER',
     title: 'Phase 3',
-    period: '2024 – 2025',
     content: 'A journey of clarity and growth. This phase helped me reconnect with myself. I focused on health, travel, learning, and understanding what truly matters. I deepened my skills in data, dashboards, UI and UX, and AI workflows. It became the chapter that aligned my values with my ambitions and direction.',
     colors: 'text-[#e6839c]',
   },
@@ -32,7 +29,6 @@ const phases = [
     id: 'phase-4',
     superTitle: '✨ THE NEXT CHAPTER',
     title: 'Phase 4',
-    period: '2025 →',
     content: 'A future shaped by creativity, strategy, and purpose. I am now blending everything I have learned across technology, design, data, and storytelling to build digital experiences that feel meaningful and human. This chapter is about creating work that is functional and expressive, and that brings value to people. I am ready to grow, contribute, and build with a team that appreciates innovation, quality, and character.',
     colors: 'text-primary',
   },
@@ -62,10 +58,10 @@ const textVariants = {
 };
 
 const yearMarkers = [
-  { year: '2020', left: '25%' },
-  { year: '2024', left: '50%' },
-  { year: '2025', left: '75%' },
-];
+    { year: '2020', left: '25%' },
+    { year: '2024', left: '50%' },
+    { year: '2025', left: '75%' },
+  ];
 
 export function AboutSection() {
   const [activePhase, setActivePhase] = useState(phases[0].id);
@@ -96,7 +92,7 @@ export function AboutSection() {
 
         <div className="farah-text-container">
           <h1 
-            className={`select-none text-[12vw] sm:text-[15vw] md:text-[17vw] lg:text-[12vw] font-black leading-none tracking-tighter flex transition-colors duration-1000 ease-in-out ${selectedPhaseData?.colors || 'text-neutral-400'}`}
+            className={`select-none text-[12vw] sm:text-[15vw] md:text-[17vw] lg:text-[14vw] font-black leading-none tracking-tighter flex transition-colors duration-1000 ease-in-out ${selectedPhaseData?.colors || 'text-neutral-400'}`}
           >
             {farahLetters.map((letter, index) => (
               <span key={index} className="relative">
@@ -117,15 +113,9 @@ export function AboutSection() {
                       exit="exit"
                       className="absolute inset-0 flex flex-col items-center justify-start pt-8"
                     >
-                      <motion.h4 
-                          variants={textVariants}
-                          className={`font-headline text-lg font-bold tracking-tight ${selectedPhaseData.colors}`}
-                      >
-                          {selectedPhaseData.period}
-                      </motion.h4>
                       <motion.p 
                           variants={textVariants}
-                          className="mt-2 max-w-2xl text-center text-base text-neutral-300 md:text-lg"
+                          className="mt-2 max-w-2xl text-center text-sm text-neutral-300 md:text-base"
                       >
                           {selectedPhaseData.content}
                       </motion.p>
@@ -159,24 +149,23 @@ export function AboutSection() {
           ></div>
 
           <div className="relative flex justify-between w-full">
-            {phases.map((phase) => (
-              <div key={phase.id} className="flex flex-col items-center">
-                <button
-                  onClick={() => setActivePhase(phase.id)}
-                  className="relative z-10 flex flex-col items-center group p-2 -m-2"
-                >
-                  <div className={`
-                    absolute top-0 h-2 w-0.5 transition-all duration-300
+            {phases.map((phase, index) => (
+              <button
+                key={phase.id}
+                onClick={() => setActivePhase(phase.id)}
+                className="relative z-10 flex-1 group p-2 text-center"
+              >
+                 <div className={`
+                    absolute top-0 h-2 w-0.5 transition-all duration-300 left-1/2 -translate-x-1/2
                     ${activePhase === phase.id ? 'bg-primary shadow-[0_0_8px_theme(colors.primary)] h-3 -translate-y-0.5' : 'bg-neutral-500'}
                   `}></div>
-                  <span className={`
-                    mt-4 text-xs font-medium transition-colors duration-300
-                    ${activePhase === phase.id ? 'text-white' : 'text-neutral-400 group-hover:text-white'}
-                  `}>
-                    {phase.title}
-                  </span>
-                </button>
-              </div>
+                <span className={`
+                  mt-4 text-xs font-medium transition-colors duration-300 block
+                  ${activePhase === phase.id ? 'text-white' : 'text-neutral-400 group-hover:text-white'}
+                `}>
+                  {phase.title}
+                </span>
+              </button>
             ))}
           </div>
         </div>
