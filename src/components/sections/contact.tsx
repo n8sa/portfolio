@@ -10,12 +10,6 @@ export function Contact() {
   return (
     <section id="contact" className="w-full h-full bg-secondary/20 py-24 sm:py-32 flex justify-center items-center">
       <div className="container">
-        <div className="mb-16 text-center">
-            <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-                Let's build something great together.
-            </p>
-        </div>
-        
         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-12 md:grid-cols-2">
             <div className="flex flex-col gap-8">
                 <div className="flex items-center gap-4">
