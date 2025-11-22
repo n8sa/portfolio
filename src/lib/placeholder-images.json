@@ -55,16 +55,22 @@
       "imageHint": "text editor"
     },
     {
-      "id": "project-budget-calculator-1",
-      "description": "Budget calculator step 1",
-      "imageUrl": "https://images.unsplash.com/photo-1762340275877-32d64414d8aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmb3JtJTIwaW50ZXJmYWNlfGVufDB8fHx8MTc2MzgyOTI0MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "form interface"
+      "id": "project-octopost-1",
+      "description": "Octopost dashboard view",
+      "imageUrl": "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkYXNoYm9hcmQlMjBhbmFseXRpY3N8ZW58MHx8fHwxNzYzODMwMTQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dashboard analytics"
     },
     {
-      "id": "project-budget-calculator-2",
-      "description": "Budget calculator results screen",
-      "imageUrl": "https://images.unsplash.com/photo-1543286386-713bdd548da4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaGFydCUyMGdyYXBofGVufDB8fHx8MTc2Mzc5NzUxOXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "chart graph"
+      "id": "project-octopost-2",
+      "description": "Octopost content scheduling UI",
+      "imageUrl": "https://images.unsplash.com/photo-1676287571982-611b20c9752f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb250ZW50JTIwY2FsZW5kYXJ8ZW58MHx8fHwxNzYzODMxODYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "content calendar"
+    },
+    {
+      "id": "project-octopost-3",
+      "description": "Octopost post management screen",
+      "imageUrl": "https://images.unsplash.com/photo-1698399480524-c6b256c2fe80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb250ZW50JTIwbWFuYWdlcnxlbnwwfHx8fDE3NjM4MzE4NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "content manager"
     },
     {
       "id": "project-portfolio-1",

@@ -32,7 +32,7 @@ export const projects: Project[] = [
         liveUrl: "https://pulse.astroawani.com/kuiz-belanjawan-2026",
         images: [
             { url: "https://storage.googleapis.com/project-media/a5113197-8c11-477c-a49e-1d374dc2a044", alt: "Kuiz Belanjawan main screen", hint: "website mockup" },
-            { url: "https://storage.googleapis.com/project-media/110e5728-4034-4171-8b38-5178e5898701", alt: "Kuiz Belanjawan UI flow", hint: "quiz interface" },
+            { url: "https://storage.googleapis.com/project-media/6fdc6f93-f1f3-4e4b-9e4a-4e2b0d0c3547", alt: "Kuiz Belanjawan results screen", hint: "quiz results" },
         ]
     },
     {
@@ -70,21 +70,23 @@ export const projects: Project[] = [
             { url: "https://picsum.photos/seed/ai-2/1200/800", alt: "Generated content example", hint: "text editor" },
         ]
     },
-     {
-        slug: "budget-calculator-2026",
+    {
+        slug: "octopost",
         category: "Web App",
-        title: "BUDGET CALCULATOR 2026",
-        description: "A lightweight quiz calculator with a simple step-by-step UI for public engagement.",
+        title: "OCTOPOST",
+        description: "A multi-phase content publishing and dashboard project. It includes a Post module for managing and scheduling content, and a Dashboard module for analytics and insights. My work included planning the entire development timeline and structuring the architecture for a cleaner, more modern workflow.",
         features: [
-            "Clean steps",
-            "Responsive UI",
-            "Fast scoring logic",
+            "Post module for content publishing",
+            "Dashboard module with analytics overview",
+            "Clean timeline planning with weekly sprints",
+            "Modern UI layout with smooth interactions"
         ],
-        tech: ["JavaScript", "HTML", "Tailwind CSS"],
+        tech: ["Next.js", "React", "Tailwind CSS", "Node.js", "API Integration"],
         liveUrl: "#",
         images: [
-            { url: "https://picsum.photos/seed/bc-1/1200/800", alt: "Budget calculator step 1", hint: "form interface" },
-            { url: "https://picsum.photos/seed/bc-2/1200/800", alt: "Budget calculator results screen", hint: "chart graph" },
+            { url: "https://picsum.photos/seed/octo-1/1200/800", alt: "Octopost dashboard view", hint: "dashboard analytics" },
+            { url: "https://picsum.photos/seed/octo-2/1200/800", alt: "Octopost content scheduling UI", hint: "content calendar" },
+            { url: "https://picsum.photos/seed/octo-3/1200/800", alt: "Octopost post management screen", hint: "content manager" },
         ]
     },
     {
