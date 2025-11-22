@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/#about", label: "About" },
-  { href: "/projects", label: "Projects" },
+  { href: "/#projects", label: "Projects" },
   { href: "/#contact", label: "Contact" },
 ];
 
@@ -45,7 +45,12 @@ export function Header() {
     };
 
     const handlePathChange = () => {
-        setActiveLink(window.location.pathname);
+        const currentPath = window.location.pathname;
+        if (currentPath.startsWith('/projects')) {
+            setActiveLink('/#projects');
+        } else {
+            setActiveLink(window.location.pathname + window.location.hash);
+        }
     }
     
     window.addEventListener("scroll", handleScroll);
@@ -66,7 +71,7 @@ export function Header() {
         const targetId = href.substring(href.indexOf('#'));
         
         if (window.location.pathname !== '/') {
-            window.location.href = href;
+             window.location.href = href;
         } else {
              const targetElement = document.querySelector(targetId === '/' ? '#home' : targetId);
              targetElement?.scrollIntoView({ behavior: 'smooth' });
