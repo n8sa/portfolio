@@ -74,7 +74,7 @@ export default function ProjectPage() {
       animate="visible"
       exit="hidden"
       variants={containerVariants}
-      className="flex min-h-screen w-full flex-col items-center justify-center bg-background p-8 md:h-screen md:overflow-hidden"
+      className="flex min-h-screen w-full flex-col items-center justify-center bg-background p-4 md:h-screen md:overflow-hidden md:p-8"
     >
         <motion.div variants={leftColVariants} className="absolute top-8 left-8">
             <Link
@@ -88,8 +88,8 @@ export default function ProjectPage() {
             </Link>
         </motion.div>
 
-        <div className="container mx-auto mt-16 md:mt-0 max-w-6xl w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+        <div className="container mx-auto mt-16 w-full max-w-6xl md:mt-0">
+            <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-16">
                 {/* Left Column */}
                 <motion.div variants={leftColVariants} className="flex flex-col gap-8">
                     <motion.h1
@@ -110,14 +110,14 @@ export default function ProjectPage() {
                         <h2 className="text-lg font-bold text-primary">Tech Stack</h2>
                         <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground">
                             {project.tech.map((tech) => (
-                            <li key={tech} className="bg-muted/50 px-2 py-1 rounded-md">{tech}</li>
+                            <li key={tech} className="rounded-md bg-muted/50 px-2 py-1">{tech}</li>
                             ))}
                         </ul>
                     </div>
 
                     {project.liveUrl && project.liveUrl !== '#' && (
                         <motion.div variants={buttonHoverVariants} whileHover="hover" className="w-full sm:w-auto">
-                            <Button asChild size="lg" className="rounded-full w-full sm:w-auto">
+                            <Button asChild size="lg" className="w-full rounded-full sm:w-auto">
                                 <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                                 Live Demo <ArrowUpRight className="ml-2 h-4 w-4" />
                                 </Link>
@@ -128,7 +128,7 @@ export default function ProjectPage() {
 
                 {/* Right Column */}
                 {project.images && project.images.length > 0 && (
-                    <motion.div variants={rightColVariants} className="relative h-[300px] md:h-[450px] w-full mt-8 md:mt-0">
+                    <motion.div variants={rightColVariants} className="relative mt-8 h-[300px] w-full md:mt-0 md:h-[450px]">
                         {project.images.slice(0, 3).map((img, index) => (
                              <motion.div
                                 key={index}
