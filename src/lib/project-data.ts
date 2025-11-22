@@ -1,5 +1,20 @@
 export const projects = [
     {
+        slug: "kuiz-belanjawan-2026",
+        category: "Web App",
+        title: "Kuiz Belanjawan 2026",
+        description: "I led the front-end development for this engaging and modern quiz microsite, designed to attract a younger audience with a cyber-themed UI and AI-powered features. The goal was to make complex budget information accessible and fun.",
+        features: [
+            "Sticky navigation and dynamic parallax hero section",
+            "Custom PHP script to integrate an AI service into the CMS",
+            "AI-powered generation of quiz questions, summaries, and FAQs",
+            "Modern, cyber-themed UI/UX for a younger demographic",
+            "Simple and intuitive user flow"
+        ],
+        tech: ["Next.js", "React", "Tailwind CSS", "AI", "PHP"],
+        liveUrl: "https://pulse.astroawani.com/kuiz-belanjawan-2026",
+    },
+    {
         slug: "azure-vm-deployment",
         category: "Cloud Infrastructure",
         title: "Azure VM Deployment",
@@ -42,21 +57,6 @@ export const projects = [
             "Built a simple UI for editors to trigger AI actions"
         ],
         tech: ["PHP", "JavaScript", "REST APIs", "AI/ML", "CMS"],
-        liveUrl: "#",
-    },
-    {
-        slug: "kuiz-belanjawan-2026",
-        category: "Web App",
-        title: "Kuiz Belanjawan 2026",
-        description: "I led the front-end development for this engaging and modern quiz microsite, designed to attract a younger audience with a cyber-themed UI and AI-powered features. The goal was to make complex budget information accessible and fun.",
-        features: [
-            "Sticky navigation and dynamic parallax hero section",
-            "Custom PHP script to integrate an AI service into the CMS",
-            "AI-powered generation of quiz questions, summaries, and FAQs",
-            "Modern, cyber-themed UI/UX for a younger demographic",
-            "Simple and intuitive user flow"
-        ],
-        tech: ["Next.js", "React", "Tailwind CSS", "AI", "PHP"],
         liveUrl: "#",
     },
     {
