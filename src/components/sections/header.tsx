@@ -5,88 +5,47 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/#about", label: "About" },
-  { href: "/#projects", label: "Projects" },
-  { href: "/#contact", label: "Contact" },
+type SectionId = 'home' | 'about' | 'projects' | 'contact';
+
+const navLinks: { href: SectionId, label: string }[] = [
+  { href: "home", label: "Home" },
+  { href: "about", label: "About" },
+  { href: "projects", label: "Projects" },
+  { href: "contact", label: "Contact" },
 ];
 
-export function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState('/');
+type HeaderProps = {
+  activeSection: SectionId;
+  setActiveSection: (section: SectionId) => void;
+};
 
+export function Header({ activeSection, setActiveSection }: HeaderProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false); // Can be repurposed if needed
+
+  // Effect to check scroll (might be useful for other background effects)
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
-      
-      if (window.location.pathname !== '/') return;
-
-      const sections = navLinks.map(link => {
-          const href = link.href.startsWith('/#') ? link.href.substring(1) : (link.href === '/' ? '#home' : null);
-          if (!href) return null;
-          return document.querySelector(href);
-      });
-      
-      let currentSection = '/';
-      sections.forEach((section, index) => {
-        if (section) {
-          const rect = section.getBoundingClientRect();
-          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-            currentSection = navLinks[index].href;
-          }
-        }
-      });
-       if (window.scrollY < window.innerHeight / 2) {
-        currentSection = '/';
-      }
-      setActiveLink(currentSection);
     };
-
-    const handlePathChange = () => {
-        const currentPath = window.location.pathname;
-        if (currentPath.startsWith('/projects')) {
-            setActiveLink('/#projects');
-        } else {
-            setActiveLink(window.location.pathname + window.location.hash);
-        }
-    }
-    
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener('popstate', handlePathChange);
-    
-    handleScroll();
-    handlePathChange();
-
-    return () => {
-        window.removeEventListener("scroll", handleScroll);
-        window.removeEventListener('popstate', handlePathChange);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href.startsWith('/#') || href === '/') {
-        e.preventDefault();
-        const targetId = href.substring(href.indexOf('#'));
-        
-        if (window.location.pathname !== '/') {
-             window.location.href = href;
-        } else {
-             const targetElement = document.querySelector(targetId === '/' ? '#home' : targetId);
-             targetElement?.scrollIntoView({ behavior: 'smooth' });
-        }
-
-    } else {
-        setActiveLink(href);
-    }
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, section: SectionId) => {
+    e.preventDefault();
+    setActiveSection(section);
     setIsOpen(false);
   };
 
+  const isProjectPage = typeof window !== 'undefined' && window.location.pathname.startsWith('/projects');
+  let currentActiveLink = isProjectPage ? 'projects' : activeSection;
+
+
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isOpen || activeLink !== '/' ? "bg-background/80 backdrop-blur-sm" : "bg-transparent"}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isOpen || activeSection !== 'home' || isProjectPage ? "bg-background/80 backdrop-blur-sm" : "bg-transparent"}`}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <Link href="/" onClick={(e) => handleLinkClick(e, '/')} className="font-headline text-2xl font-bold text-primary">
+        <Link href="#" onClick={(e) => handleLinkClick(e, 'home')} className="font-headline text-2xl font-bold text-primary">
           FN
         </Link>
         
@@ -95,9 +54,9 @@ export function Header() {
           {navLinks.map((link) => (
             <Link
               key={link.href}
-              href={link.href}
+              href={`#${link.href}`}
               onClick={(e) => handleLinkClick(e, link.href)}
-              className={`text-sm font-medium transition-colors ${activeLink === link.href ? 'text-primary' : 'text-muted-foreground hover:text-primary'}`}
+              className={`text-sm font-medium transition-colors ${currentActiveLink === link.href ? 'text-primary' : 'text-muted-foreground hover:text-primary'}`}
             >
               {link.label}
             </Link>
@@ -119,9 +78,9 @@ export function Header() {
                     {navLinks.map((link) => (
                         <Link
                         key={link.href}
-                        href={link.href}
+                        href={`#${link.href}`}
                         onClick={(e) => handleLinkClick(e, link.href)}
-                        className={`w-full text-center text-lg font-medium transition-colors ${activeLink === link.href ? 'text-primary' : 'text-muted-foreground hover:text-primary'}`}
+                        className={`w-full text-center text-lg font-medium transition-colors ${currentActiveLink === link.href ? 'text-primary' : 'text-muted-foreground hover:text-primary'}`}
                         >
                         {link.label}
                         </Link>

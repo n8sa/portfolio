@@ -32,7 +32,7 @@ export function Projects() {
   return (
     <section
         id="projects"
-        className="flex min-h-screen w-full flex-col items-center justify-center bg-background p-4"
+        className="flex min-h-full w-full flex-col items-center justify-center bg-background p-4"
     >
       <motion.div
         variants={containerVariants}

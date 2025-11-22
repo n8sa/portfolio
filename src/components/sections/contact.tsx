@@ -8,7 +8,7 @@ export function Contact() {
   const email = "farah.nisa.dev@example.com";
 
   return (
-    <section id="contact" className="w-full bg-secondary/20 py-24 sm:py-32 flex justify-center items-center h-full">
+    <section id="contact" className="w-full h-full bg-secondary/20 py-24 sm:py-32 flex justify-center items-center">
       <div className="container">
         <div className="mb-16 text-center">
             <h2 className="font-headline text-5xl font-bold tracking-tighter text-foreground sm:text-6xl md:text-7xl">

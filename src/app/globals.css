@@ -75,6 +75,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow: hidden; /* Prevent scrolling */
   }
 
   .farah-text-gradient {

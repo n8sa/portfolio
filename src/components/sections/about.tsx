@@ -65,7 +65,7 @@ export function AboutSection() {
   const farahLetters = ['F', 'A', 'R', 'A', 'H'];
 
   return (
-    <section id="about" className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-black">
+    <section id="about" className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden bg-black p-4">
       <div className="relative flex flex-col items-center justify-center">
         <div className="relative h-8 w-full">
             <AnimatePresence mode="wait">
@@ -86,7 +86,7 @@ export function AboutSection() {
 
         <div className="farah-text-container">
           <h1 
-            className={`select-none text-[15vw] sm:text-[17vw] md:text-[20vw] lg:text-[16vw] font-black leading-none tracking-tighter flex transition-colors duration-1000 ease-in-out ${selectedPhaseData?.colors || 'text-neutral-400'}`}
+            className={`select-none text-[20vw] sm:text-[22vw] md:text-[24vw] lg:text-[20vw] font-black leading-none tracking-tighter flex transition-colors duration-1000 ease-in-out ${selectedPhaseData?.colors || 'text-neutral-400'}`}
           >
             {farahLetters.map((letter, index) => (
               <span key={index} className="relative">
@@ -109,7 +109,7 @@ export function AboutSection() {
                     >
                       <motion.p 
                           variants={textVariants}
-                          className="mt-2 max-w-2xl text-center text-xs text-neutral-300 md:text-sm"
+                          className="mt-2 max-w-xl text-center text-[10px] text-neutral-300 sm:text-xs"
                       >
                           {selectedPhaseData.content}
                       </motion.p>
