@@ -11,7 +11,7 @@ const phases = [
     superTitle: 'THE LEARNER',
     title: 'Phase 1',
     period: '2017 – 2020',
-    content: 'UiTM student exploring technology, learning fundamentals, and discovering my direction.',
+    content: 'A foundation built on curiosity. I began as a UiTM student who wasn’t just studying, but exploring technology with genuine interest. This was the phase where I discovered my passion for problem-solving, discipline, and learning quickly. It shaped the mindset and adaptability I carry into everything I do today.',
     icons: [BookOpen, Briefcase],
     colors: 'text-neutral-400',
   },
@@ -20,7 +20,7 @@ const phases = [
     superTitle: 'THE BUILDER',
     title: 'Phase 2',
     period: '2020 – 2024',
-    content: 'System Engineer era: Fujitsu, Parkson, Petronas Digital. Focused on automation, Azure, backend, and infrastructure.',
+    content: 'The years I transformed knowledge into real skill. I strengthened my technical abilities in enterprise environments involving automation, Azure, backend development, and infrastructure support. My experience with Fujitsu, Parkson, and Petronas Digital opened my eyes to complex systems, operational needs, and real-world problem solving. I grew into someone who can adapt, build with intention, and deliver with clarity.',
     icons: [Cloud, Terminal, Server],
     logos: ['/fujitsu-logo.svg', '/parkson-logo.svg', '/petronas-logo.svg'],
     colors: 'text-[#D8A7B1]',
@@ -30,7 +30,7 @@ const phases = [
     superTitle: 'THE SEEKER',
     title: 'Phase 3',
     period: '2024 – 2025',
-    content: 'Exploration, balance, and growth. Focused on health, family, travel, and upskilling in data, UI/UX, and AI.',
+    content: 'A journey of clarity and growth. This phase helped me reconnect with myself. I focused on health, travel, learning, and understanding what truly matters. I deepened my skills in data, dashboards, UI and UX, and AI workflows. It became the chapter that aligned my values with my ambitions and direction.',
     icons: [Heart, Rocket, Wand2],
     colors: 'text-[#e6839c]',
   },
@@ -39,7 +39,7 @@ const phases = [
     superTitle: 'THE NEXT CHAPTER',
     title: 'Phase 4',
     period: '2025 →',
-    content: 'Blending data, design, and storytelling. Building meaningful and value-driven digital experiences with creative tech.',
+    content: 'A future shaped by creativity, strategy, and purpose. I am now blending everything I have learned across technology, design, data, and storytelling to build digital experiences that feel meaningful and human. This chapter is about creating work that is functional and expressive, and that brings value to people. I am ready to grow, contribute, and build with a team that appreciates innovation, quality, and character.',
     icons: [Star, BarChart, Wand2],
     colors: 'text-primary',
   },
@@ -182,7 +182,7 @@ export function AboutSection() {
                     </motion.h4>
                     <motion.p 
                         variants={textVariants}
-                        className="mt-2 max-w-lg text-center text-base text-neutral-300 md:text-lg"
+                        className="mt-2 max-w-2xl text-center text-base text-neutral-300 md:text-lg"
                     >
                         {selectedPhaseData.content}
                     </motion.p>
