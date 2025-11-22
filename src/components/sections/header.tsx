@@ -6,25 +6,31 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#featured", label: "Featured" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/#about", label: "About" },
+  { href: "/#featured", label: "Featured" },
+  { href: "/projects", label: "Projects" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState('#home');
+  const [activeLink, setActiveLink] = useState('/');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+      
+      if (window.location.pathname !== '/') return;
 
-      // Check which section is in view
-      const sections = navLinks.map(link => document.querySelector(link.href));
-      let currentSection = '#home';
+      const sections = navLinks.map(link => {
+          const href = link.href.startsWith('/#') ? link.href.substring(1) : (link.href === '/' ? '#home' : null);
+          if (!href) return null;
+          return document.querySelector(href);
+      });
+      
+      let currentSection = '/';
       sections.forEach((section, index) => {
         if (section) {
           const rect = section.getBoundingClientRect();
@@ -33,25 +39,50 @@ export function Header() {
           }
         }
       });
+       if (window.scrollY < window.innerHeight / 2) {
+        currentSection = '/';
+      }
       setActiveLink(currentSection);
     };
 
+    const handlePathChange = () => {
+        setActiveLink(window.location.pathname);
+    }
+    
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
+    window.addEventListener('popstate', handlePathChange);
+    
+    handleScroll();
+    handlePathChange();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+        window.removeEventListener("scroll", handleScroll);
+        window.removeEventListener('popstate', handlePathChange);
+    };
   }, []);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    if (href.startsWith('/#') || href === '/') {
+        e.preventDefault();
+        const targetId = href.substring(href.indexOf('#'));
+        
+        if (window.location.pathname !== '/') {
+            window.location.href = href;
+        } else {
+             const targetElement = document.querySelector(targetId === '/' ? '#home' : targetId);
+             targetElement?.scrollIntoView({ behavior: 'smooth' });
+        }
+
+    } else {
+        setActiveLink(href);
+    }
     setIsOpen(false);
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 backdrop-blur-sm" : "bg-transparent"}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isOpen || activeLink !== '/' ? "bg-background/80 backdrop-blur-sm" : "bg-transparent"}`}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <Link href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="font-headline text-2xl font-bold text-primary">
+        <Link href="/" onClick={(e) => handleLinkClick(e, '/')} className="font-headline text-2xl font-bold text-primary">
           FN
         </Link>
         
