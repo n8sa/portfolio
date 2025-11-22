@@ -45,9 +45,9 @@ export const projects = [
         liveUrl: "#",
     },
     {
-        slug: "ai-in-awani-cms",
+        slug: "ai-in-astro-awani-portal",
         category: "AI Tool",
-        title: "AI in AWANI CMS",
+        title: "Ai in Astro Awani Portal",
         description: "I played a key role in augmenting the capabilities of the internal Content Management System (CMS) by integrating AI. This involved using PHP and JavaScript to connect with third-party AI services. The new features automated tasks like generating content summaries and populating FAQ sections, which improved the efficiency of the content creation and management process.",
         features: [
             "Integrated a third-party AI API into the existing CMS",
