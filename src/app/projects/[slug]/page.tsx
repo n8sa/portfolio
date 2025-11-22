@@ -6,6 +6,7 @@ import { notFound, useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function ProjectPage() {
   const params = useParams();
@@ -37,6 +38,14 @@ export default function ProjectPage() {
       },
     },
   };
+  
+  const imageHoverVariants = {
+    hover: {
+      scale: 1.03,
+      boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
+      transition: { duration: 0.3 }
+    }
+  };
 
   return (
     <motion.main
@@ -49,14 +58,16 @@ export default function ProjectPage() {
       }}
       className="flex min-h-screen w-full flex-col bg-background"
     >
-      <div className="container mx-auto max-w-4xl px-4 py-24 sm:py-32">
-        <motion.div variants={containerVariants} className="flex flex-col gap-12">
+      <div className="container mx-auto max-w-5xl px-4 py-24 sm:py-32">
+        <motion.div variants={containerVariants} className="flex flex-col gap-16">
             <motion.div variants={itemVariants}>
                 <Link
                 href="/#projects"
-                className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="group flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
-                <ArrowLeft className="h-4 w-4" />
+                <motion.div whileHover={{ x: -4 }} transition={{ type: 'spring', stiffness: 300 }}>
+                    <ArrowLeft className="h-4 w-4" />
+                </motion.div>
                 Back to Projects
                 </Link>
             </motion.div>
@@ -68,7 +79,7 @@ export default function ProjectPage() {
             {project.title}
           </motion.h1>
 
-          <motion.div variants={itemVariants} className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <motion.div variants={itemVariants} className="grid grid-cols-1 gap-12 md:grid-cols-3">
             <div className="md:col-span-2">
               <h2 className="text-xl font-bold text-primary">About the project</h2>
               <p className="mt-4 text-base text-muted-foreground md:text-lg">
@@ -87,7 +98,7 @@ export default function ProjectPage() {
           
           <motion.div variants={itemVariants} className="grid grid-cols-1 gap-8">
              <div>
-              <h2 className="text-xl font-bold text-primary">Features</h2>
+              <h2 className="text-xl font-bold text-primary">Key Features</h2>
               <ul className="mt-4 list-disc list-inside space-y-2 text-muted-foreground">
                 {project.features.map((feature) => (
                   <li key={feature}>{feature}</li>
@@ -95,6 +106,33 @@ export default function ProjectPage() {
               </ul>
             </div>
           </motion.div>
+
+          {project.images && project.images.length > 0 && (
+             <motion.div variants={itemVariants} className="grid grid-cols-1 gap-8">
+                <div>
+                    <h2 className="text-xl font-bold text-primary">Gallery</h2>
+                    <div className="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
+                    {project.images.map((img, index) => (
+                        <motion.div 
+                          key={index} 
+                          className="overflow-hidden rounded-lg"
+                          variants={imageHoverVariants}
+                          whileHover="hover"
+                        >
+                        <Image
+                            src={img.url}
+                            alt={img.alt}
+                            width={1200}
+                            height={800}
+                            className="h-full w-full object-cover"
+                            data-ai-hint={img.hint}
+                        />
+                        </motion.div>
+                    ))}
+                    </div>
+                </div>
+            </motion.div>
+          )}
 
 
           {project.liveUrl && project.liveUrl !== '#' && (

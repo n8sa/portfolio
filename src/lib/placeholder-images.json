@@ -7,34 +7,70 @@
       "imageHint": "woman portrait"
     },
     {
-      "id": "kuiz-belanjawan-2026",
-      "description": "A screenshot of the Kuiz Belanjawan 2026 project.",
-      "imageUrl": "https://images.unsplash.com/photo-1708724195876-1156245fce21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3ZWJzaXRlJTIwc2NyZWVuc2hvdHxlbnwwfHx8fDE3NjM2MjA5NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "website screenshot"
-    },
-    {
-      "id": "project-ramadan",
-      "description": "Image for the AWANI Ramadan microsite project.",
-      "imageUrl": "https://images.unsplash.com/photo-1616711823936-9de02bffaa6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhYnN0cmFjdCUyMHBhdHRlcm5zfGVufDB8fHx8MTc2MzY1Nzk2Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "abstract patterns"
-    },
-    {
-      "id": "project-ai-cms",
-      "description": "Image for the AI features in AWANI CMS project.",
-      "imageUrl": "https://images.unsplash.com/photo-1566915896913-549d796d2166?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb2RlJTIwZWRpdG9yfGVufDB8fHx8MTc2MzYyNzcwNHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "code editor"
-    },
-    {
       "id": "about-image",
       "description": "An illustrative image for the about section.",
       "imageUrl": "https://images.unsplash.com/photo-1594636797501-ef436e157819?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGVzayUyMHNldHVwfGVufDB8fHx8MTc2MzYxNjA3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "desk setup"
     },
     {
-      "id": "project-azure-vm",
-      "description": "Image for the Azure VM Deployment project.",
-      "imageUrl": "https://images.unsplash.com/photo-1629904853716-f0bc6421916b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhenVyZXxlbnwwfHx8fDE3MjE4MTk2ODZ8MA&ixlib=rb-4.0.3&q=80&w=1080",
-      "imageHint": "azure cloud"
+      "id": "project-kuiz-belanjawan-1",
+      "description": "Kuiz Belanjawan main screen",
+      "imageUrl": "https://images.unsplash.com/photo-1642132652859-3ef5a1048fd1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3ZWJzaXRlJTIwbW9ja3VwfGVufDB8fHx8MTc2MzgyOTI0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "website mockup"
+    },
+    {
+      "id": "project-kuiz-belanjawan-2",
+      "description": "Kuiz Belanjawan UI flow",
+      "imageUrl": "https://images.unsplash.com/photo-1659652225508-4d45c787a389?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxxdWl6JTIwaW50ZXJmYWNlfGVufDB8fHx8MTc2Mzc0MDg0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "quiz interface"
+    },
+    {
+      "id": "project-ramadan-1",
+      "description": "Ramadan microsite hero section",
+      "imageUrl": "https://images.unsplash.com/photo-1577083165633-14ebcdb0f658?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aXNsYW1pYyUyMHBhdHRlcm58ZW58MHx8fHwxNzYzNzUzNzk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "islamic pattern"
+    },
+    {
+      "id": "project-ramadan-2",
+      "description": "Ramadan microsite prayer times",
+      "imageUrl": "https://images.unsplash.com/photo-1480694313141-fce5e697ee25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb2JpbGUlMjBhcHB8ZW58MHx8fHwxNzYzNzcyMzg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile app"
+    },
+    {
+      "id": "project-ai-cms-1",
+      "description": "AI content generator interface",
+      "imageUrl": "https://images.unsplash.com/photo-1592318054338-9074a4968e2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXNoYm9hcmQlMjB1aXxlbnwwfHx8fDE3NjM3NjYwODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dashboard ui"
+    },
+    {
+      "id": "project-ai-cms-2",
+      "description": "Generated content example",
+      "imageUrl": "https://images.unsplash.com/photo-1663662426323-7ba7aeb4f831?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dGV4dCUyMGVkaXRvcnxlbnwwfHx8fDE3NjM4MjkyNDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "text editor"
+    },
+    {
+      "id": "project-budget-calculator-1",
+      "description": "Budget calculator step 1",
+      "imageUrl": "https://images.unsplash.com/photo-1762340275877-32d64414d8aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmb3JtJTIwaW50ZXJmYWNlfGVufDB8fHx8MTc2MzgyOTI0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "form interface"
+    },
+    {
+      "id": "project-budget-calculator-2",
+      "description": "Budget calculator results screen",
+      "imageUrl": "https://images.unsplash.com/photo-1543286386-2e659306cd6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaGFydCUyMGdyYXBofGVufDB8fHx8MTc2Mzc5NzUxOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chart graph"
+    },
+    {
+      "id": "project-portfolio-1",
+      "description": "Portfolio hero section",
+      "imageUrl": "https://images.unsplash.com/photo-1729575846609-da7ba4369bf0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtaW5pbWFsaXN0JTIwd2Vic2l0ZXxlbnwwfHx8fDE3NjM3ODY4NjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "minimalist website"
+    },
+    {
+      "id": "project-portfolio-2",
+      "description": "Portfolio about section",
+      "imageUrl": "https://images.unsplash.com/photo-1610619162503-1754c7f0e8cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0aW1lbGluZSUyMGRlc2lnbnxlbnwwfHx8fDE3NjM4MjkyNDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "timeline design"
     }
   ]
 }

@@ -1,77 +1,106 @@
-export const projects = [
+export type ProjectImage = {
+    url: string;
+    alt: string;
+    hint: string;
+};
+
+export type Project = {
+    slug: string;
+    category: string;
+    title: string;
+    description: string;
+    features: string[];
+    tech: string[];
+    liveUrl: string;
+    images: ProjectImage[];
+};
+
+export const projects: Project[] = [
     {
         slug: "kuiz-belanjawan-2026",
         category: "Web App",
         title: "Kuiz Belanjawan 2026",
-        description: "I led the front-end development for this engaging and modern quiz microsite, designed to attract a younger audience with a cyber-themed UI and AI-powered features. The goal was to make complex budget information accessible and fun.",
+        description: "A fast and modern quiz microsite for younger audiences, built with cyber-style UI and AI-enhanced elements to make budget information fun and accessible.",
         features: [
-            "Sticky navigation and dynamic parallax hero section",
-            "Custom PHP script to integrate an AI service into the CMS",
-            "AI-powered generation of quiz questions, summaries, and FAQs",
-            "Modern, cyber-themed UI/UX for a younger demographic",
-            "Simple and intuitive user flow"
+            "Cyber UI",
+            "Smooth transitions",
+            "Responsive layout",
+            "Lightweight AI logic"
         ],
-        tech: ["Next.js", "React", "Tailwind CSS", "AI", "PHP"],
+        tech: ["Next.js", "React", "Tailwind CSS", "AI Integration", "PHP"],
         liveUrl: "https://pulse.astroawani.com/kuiz-belanjawan-2026",
-    },
-    {
-        slug: "azure-vm-deployment",
-        category: "Cloud Infrastructure",
-        title: "Azure VM Deployment",
-        description: "This project involved provisioning and configuring a Windows 10 Virtual Machine on Microsoft Azure. I set up the virtual network, configured network security group rules to allow RDP traffic, and assigned a public IP address. The entire process, from creating the resource group to establishing a successful remote desktop connection, was documented to serve as a guide for future deployments.",
-        features: [
-            "Provisioned Windows 10 VM",
-            "Configured Virtual Network (VNet)",
-            "Set up Network Security Group (NSG) rules for RDP",
-            "Assigned and tested Public IP",
-            "Created comprehensive documentation for the process"
-        ],
-        tech: ["Azure Portal", "Azure Virtual Machines", "Azure Networking", "RDP"],
-        liveUrl: "https://n8sa.github.io/farahPortfolio/Azure-VM-Deployment.pdf",
+        images: [
+            { url: "https://picsum.photos/seed/kb-1/1200/800", alt: "Kuiz Belanjawan main screen", hint: "website mockup" },
+            { url: "https://picsum.photos/seed/kb-2/1200/800", alt: "Kuiz Belanjawan UI flow", hint: "quiz interface" },
+        ]
     },
     {
         slug: "awani-ramadan-microsite",
         category: "Web App",
         title: "AWANI Ramadan Microsite",
-        description: "A highly interactive and responsive microsite created for Astro AWANI's major Ramadan campaign. The goal was to create an engaging and visually appealing digital experience to complement the on-air content, featuring parallax scrolling and other modern web effects to capture user attention.",
+        description: "A fully interactive Ramadan microsite with prayer times, news content, sliders, and animated hero sections.",
         features: [
-            "Fully responsive design for mobile, tablet, and desktop",
-            "Implemented parallax scrolling effects for a dynamic feel",
-            "Interactive elements to engage users with campaign content",
-            "Optimized for fast loading and smooth performance",
-            "Seamlessly integrated with the main AWANI brand identity"
+            "Real-time prayer display",
+            "Animation system",
+            "Islamic-themed UI"
         ],
-        tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "Responsive Design"],
+        tech: ["HTML", "Tailwind CSS", "JavaScript", "GSAP", "APIs"],
         liveUrl: "#",
+        images: [
+            { url: "https://picsum.photos/seed/rm-1/1200/800", alt: "Ramadan microsite hero section", hint: "islamic pattern" },
+            { url: "https://picsum.photos/seed/rm-2/1200/800", alt: "Ramadan microsite prayer times", hint: "mobile app" },
+        ]
     },
     {
-        slug: "ai-in-astro-awani-portal",
+        slug: "awani-ai-content-generator",
         category: "AI Tool",
-        title: "Ai in Astro Awani Portal",
-        description: "I played a key role in augmenting the capabilities of the internal Content Management System (CMS) by integrating AI. This involved using PHP and JavaScript to connect with third-party AI services. The new features automated tasks like generating content summaries and populating FAQ sections, which improved the efficiency of the content creation and management process.",
+        title: "AWANI AI Content Generator (CMS)",
+        description: "A CMS enhancement tool that generates summaries and FAQ using AI to speed up editorial workflow.",
         features: [
-            "Integrated a third-party AI API into the existing CMS",
-            "Automated content summary generation for articles",
-            "Automated FAQ creation based on article content",
-            "Developed custom PHP scripts for backend processing",
-            "Built a simple UI for editors to trigger AI actions"
+            "Auto-summary",
+            "AI-powered FAQ",
+            "Structured output",
+            "Editor-friendly UI"
         ],
-        tech: ["PHP", "JavaScript", "REST APIs", "AI/ML", "CMS"],
+        tech: ["PHP", "JavaScript", "OpenAI API", "HTML/CSS"],
         liveUrl: "#",
+        images: [
+            { url: "https://picsum.photos/seed/ai-1/1200/800", alt: "AI content generator interface", hint: "dashboard ui" },
+            { url: "https://picsum.photos/seed/ai-2/1200/800", alt: "Generated content example", hint: "text editor" },
+        ]
+    },
+     {
+        slug: "budget-calculator-2026",
+        category: "Web App",
+        title: "Budget Calculator 2026",
+        description: "A lightweight quiz calculator with a simple step-by-step UI for public engagement.",
+        features: [
+            "Clean steps",
+            "Responsive UI",
+            "Fast scoring logic",
+        ],
+        tech: ["JavaScript", "HTML", "Tailwind CSS"],
+        liveUrl: "#",
+        images: [
+            { url: "https://picsum.photos/seed/bc-1/1200/800", alt: "Budget calculator step 1", hint: "form interface" },
+            { url: "https://picsum.photos/seed/bc-2/1200/800", alt: "Budget calculator results screen", hint: "chart graph" },
+        ]
     },
     {
-        slug: "portfolio-website",
+        slug: "personal-portfolio",
         category: "Web App",
         title: "Personal Portfolio",
-        description: "The very website you are looking at. A project to showcase my skills in modern web development, design, and animation, built with Next.js and Framer Motion.",
+        description: "A cinematic one-page experience with static sections, bold typography, and animated transitions designed to reflect my identity and craft.",
         features: [
-            "Fully responsive and animated personal portfolio",
-            "Interactive 'About Me' timeline",
-            "Cinematic project showcase with dynamic routing",
-            "Built with Next.js App Router and Server Components",
-            "Styled with Tailwind CSS and ShadCN UI"
+            "Full-viewport sections",
+            "FARAH timeline animation",
+            "Smooth navigation"
         ],
-        tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "ShadCN UI"],
+        tech: ["Next.js/React", "Tailwind", "GSAP", "Framer Motion"],
         liveUrl: "/",
+        images: [
+             { url: "https://picsum.photos/seed/pp-1/1200/800", alt: "Portfolio hero section", hint: "minimalist website" },
+             { url: "https://picsum.photos/seed/pp-2/1200/800", alt: "Portfolio about section", hint: "timeline design" },
+        ]
     }
 ];
