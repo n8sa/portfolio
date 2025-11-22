@@ -73,4 +73,18 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .farah-text-gradient {
+    background: linear-gradient(90deg, hsl(var(--primary) / 0.8), hsl(var(--accent) / 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .farah-text-container {
+    position: relative;
+    display: inline-block;
+    -webkit-text-stroke: 1px hsl(var(--foreground) / 0.1);
+  }
 }

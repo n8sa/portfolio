@@ -7,22 +7,38 @@ import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
   { href: "#featured", label: "Featured" },
   { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
-  { href: "#education", label: "Education" },
   { href: "#contact", label: "Contact" },
 ];
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeLink, setActiveLink] = useState('#home');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+
+      // Check which section is in view
+      const sections = navLinks.map(link => document.querySelector(link.href));
+      let currentSection = '#home';
+      sections.forEach((section, index) => {
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            currentSection = navLinks[index].href;
+          }
+        }
+      });
+      setActiveLink(currentSection);
     };
+
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -46,7 +62,7 @@ export function Header() {
               key={link.href}
               href={link.href}
               onClick={(e) => handleLinkClick(e, link.href)}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              className={`text-sm font-medium transition-colors ${activeLink === link.href ? 'text-primary' : 'text-muted-foreground hover:text-primary'}`}
             >
               {link.label}
             </Link>
@@ -70,7 +86,7 @@ export function Header() {
                         key={link.href}
                         href={link.href}
                         onClick={(e) => handleLinkClick(e, link.href)}
-                        className="w-full text-center text-lg font-medium text-muted-foreground transition-colors hover:text-primary"
+                        className={`w-full text-center text-lg font-medium transition-colors ${activeLink === link.href ? 'text-primary' : 'text-muted-foreground hover:text-primary'}`}
                         >
                         {link.label}
                         </Link>
