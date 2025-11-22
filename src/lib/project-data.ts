@@ -31,9 +31,9 @@ export const projects: Project[] = [
         tech: ["Next.js", "React", "Tailwind CSS", "AI Integration", "PHP"],
         liveUrl: "https://pulse.astroawani.com/kuiz-belanjawan-2026",
         images: [
-            { url: "https://picsum.photos/seed/kb-1/1200/800", alt: "Kuiz Belanjawan main screen", hint: "website mockup" },
-            { url: "https://picsum.photos/seed/kb-2/1200/800", alt: "Kuiz Belanjawan UI flow", hint: "quiz interface" },
-            { url: "https://picsum.photos/seed/kb-3/1200/800", alt: "Kuiz Belanjawan results screen", hint: "quiz results" },
+            { url: "https://images.unsplash.com/photo-1558174685-430919a96c8d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3ZWJzaXRlJTIwbW9ja3VwfGVufDB8fHx8MTc2MzgyOTI0MHww&ixlib=rb-4.1.0&q=80&w=1080", alt: "Kuiz Belanjawan main screen", hint: "website mockup" },
+            { url: "https://images.unsplash.com/photo-1750041888982-67a58e6c9014?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxxdWl6JTIwaW50ZXJmYWNlfGVufDB8fHx8MTc2Mzc0MDg0M3ww&ixlib=rb-4.1.0&q=80&w=1080", alt: "Kuiz Belanjawan UI flow", hint: "quiz interface" },
+            { url: "https://storage.googleapis.com/project-media/6fdc6f93-f1f3-4e4b-9e4a-4e2b0d0c3547", alt: "Kuiz Belanjawan results screen", hint: "quiz results" },
         ]
     },
     {
