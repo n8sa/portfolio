@@ -1,5 +1,4 @@
 import { Hero } from '@/components/sections/hero';
-import { FeaturedProject } from '@/components/sections/featured-project';
 import { Contact } from '@/components/sections/contact';
 import { Toaster } from "@/components/ui/toaster";
 import { Header } from '@/components/sections/header';
@@ -11,7 +10,6 @@ export default function Home() {
       <Header />
       <Hero />
       <AboutSection />
-      <FeaturedProject />
       <Contact />
       <Toaster />
     </main>
