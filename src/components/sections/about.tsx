@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BookOpen, Briefcase, Heart, Rocket, Cloud, Terminal, Server, Star, BarChart, Wand2 } from 'lucide-react';
+import { BookOpen, Briefcase, Heart, Rocket, Cloud, Terminal, Server, Star, BarChart, Wand2, GraduationCap, Wrench, Ship } from 'lucide-react';
 import Image from 'next/image';
 
 const phases = [
@@ -13,9 +13,8 @@ const phases = [
     period: '2017 – 2020',
     content: 'UiTM student exploring technology, learning fundamentals, and discovering my direction.',
     icons: [BookOpen, Briefcase],
-    colors: 'text-[#D8B4A0]',
-    gradient: { '--farah-grad-1': '#D8B4A0', '--farah-grad-2': '#A39788' },
-    videoUrl: '/study.mp4',
+    colors: 'text-neutral-400',
+    gradient: { '--farah-grad-1': 'hsl(30 14% 85%)', '--farah-grad-2': 'hsl(30 14% 75%)' },
   },
   {
     id: 'phase-2',
@@ -25,9 +24,8 @@ const phases = [
     content: 'System Engineer era: Fujitsu, Parkson, Petronas Digital. Focused on automation, Azure, backend, and infrastructure.',
     icons: [Cloud, Terminal, Server],
     logos: ['/fujitsu-logo.svg', '/parkson-logo.svg', '/petronas-logo.svg'],
-    colors: 'text-[#A39788]',
-    gradient: { '--farah-grad-1': '#A39788', '--farah-grad-2': '#8A7F74' },
-    videoUrl: 'https://cdn.pixabay.com/video/2020/01/21/31423-386007780_large.mp4',
+    colors: 'text-[#D8A7B1]',
+    gradient: { '--farah-grad-1': '#D8A7B1', '--farah-grad-2': '#C1959C' },
   },
   {
     id: 'phase-3',
@@ -36,9 +34,8 @@ const phases = [
     period: '2024 – 2025',
     content: 'Exploration, balance, and growth. Focused on health, family, travel, and upskilling in data, UI/UX, and AI.',
     icons: [Heart, Rocket, Wand2],
-    colors: 'text-[#D8A7B1]',
-    gradient: { '--farah-grad-1': '#D8A7B1', '--farah-grad-2': '#C1959C' },
-    videoUrl: 'https://cdn.pixabay.com/video/2023/02/14/149867-799497049_large.mp4',
+    colors: 'text-[#e6839c]',
+    gradient: { '--farah-grad-1': '#e6839c', '--farah-grad-2': '#d16a83' },
   },
   {
     id: 'phase-4',
@@ -49,7 +46,6 @@ const phases = [
     icons: [Star, BarChart, Wand2],
     colors: 'text-primary',
     gradient: { '--farah-grad-1': 'hsl(var(--primary))', '--farah-grad-2': 'hsl(var(--accent))' },
-    videoUrl: 'https://cdn.pixabay.com/video/2022/10/24/135248-765005884_large.mp4',
   },
 ];
 
@@ -76,34 +72,25 @@ const textVariants = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 };
 
+const iconAnimation = {
+  hidden: { opacity: 0, scale: 0.5 },
+  visible: { opacity: 1, scale: 1, transition: { type: 'spring', stiffness: 200, damping: 10 } },
+  exit: { opacity: 0, scale: 0.5, transition: { duration: 0.3 } }
+};
+
 export function AboutSection() {
   const [activePhase, setActivePhase] = useState(phases[0].id);
   const selectedPhaseData = phases.find(p => p.id === activePhase);
 
+  const farahLetters = ['F', 'A', 'R', 'A', 'H'];
+
   return (
     <section id="about" className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-black">
-      
-      {/* Background Videos */}
-      <div className="absolute inset-0 z-0 h-full w-full">
-        {phases.map((phase) => (
-          <video
-            key={phase.id}
-            src={phase.videoUrl}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className={`absolute top-0 left-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
-              activePhase === phase.id ? 'opacity-100' : 'opacity-0'
-            }`}
-          />
-        ))}
-      </div>
       
       {/* Central Content Area */}
       <div className="relative flex flex-col items-center justify-center">
         {/* Top Titles */}
-        <div className="relative h-10 w-full">
+        <div className="relative h-10 w-full mb-4">
             <AnimatePresence mode="wait">
                  {selectedPhaseData && (
                     <motion.h3
@@ -123,11 +110,61 @@ export function AboutSection() {
         {/* FARAH Hero */}
         <div className="farah-text-container">
           <motion.h1 
-            className="farah-video-text select-none text-[25vw] sm:text-[28vw] md:text-[30vw] lg:text-[22vw] font-black leading-none tracking-tighter"
+            className="farah-text-gradient select-none text-[25vw] sm:text-[28vw] md:text-[30vw] lg:text-[22vw] font-black leading-none tracking-tighter flex"
             animate={selectedPhaseData?.gradient || {}}
             transition={{duration: 0.8, ease: 'easeInOut'}}
             >
-            FARAH
+            {farahLetters.map((letter, index) => (
+              <span key={index} className="farah-letter-container">
+                {letter}
+                <AnimatePresence>
+                  {/* Phase 1 Icon */}
+                  {activePhase === 'phase-1' && index === 0 && (
+                    <motion.div
+                      key="grad-cap"
+                      variants={iconAnimation}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      className="absolute -top-[5%] -left-[10%] text-neutral-300"
+                    >
+                      <GraduationCap size="20%" />
+                    </motion.div>
+                  )}
+                  {/* Phase 2 Icon */}
+                  {activePhase === 'phase-2' && index === 1 && (
+                     <motion.div
+                      key="wrench"
+                      variants={iconAnimation}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      className="absolute -bottom-[5%] -right-[15%] text-neutral-300"
+                    >
+                      <Wrench size="12%" />
+                    </motion.div>
+                  )}
+                  {/* Phase 3 Icon */}
+                   {activePhase === 'phase-3' && index === 2 && (
+                     <motion.div
+                      key="ship"
+                      variants={iconAnimation}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      className="absolute -top-[10%] left-0 w-full text-neutral-300"
+                    >
+                      <motion.div
+                        animate={{ y: [0, -5, 0] }}
+                        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                      >
+                         <Ship size="15%" />
+                      </motion.div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </span>
+            ))}
           </motion.h1>
         </div>
 
@@ -141,7 +178,7 @@ export function AboutSection() {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="absolute inset-0 flex flex-col items-center justify-start pt-4"
+                    className="absolute inset-0 flex flex-col items-center justify-start pt-8"
                     >
                     <motion.h4 
                         variants={textVariants}

@@ -86,16 +86,7 @@
     transition: --farah-grad-1 0.8s ease, --farah-grad-2 0.8s ease;
   }
   
-  .farah-video-text {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    /* The background is set by the video behind it */
-    -webkit-text-stroke: 1px hsl(var(--foreground) / 0.15);
-  }
-
-  .farah-text-container {
+  .farah-letter-container {
     position: relative;
     display: inline-block;
   }
