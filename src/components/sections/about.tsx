@@ -80,7 +80,7 @@ export function AboutSection() {
       {/* Central Content Area */}
       <div className="relative flex flex-col items-center justify-center">
         {/* Top Titles */}
-        <div className="relative h-10 w-full mb-4">
+        <div className="relative h-10 w-full">
             <AnimatePresence mode="wait">
                  {selectedPhaseData && (
                     <motion.h3
@@ -100,7 +100,7 @@ export function AboutSection() {
         {/* FARAH Hero */}
         <div className="farah-text-container">
           <h1 
-            className={`select-none text-[20vw] sm:text-[22vw] md:text-[25vw] lg:text-[18vw] font-black leading-none tracking-tighter flex transition-colors duration-1000 ease-in-out ${selectedPhaseData?.colors || 'text-neutral-400'}`}
+            className={`select-none text-[18vw] sm:text-[20vw] md:text-[22vw] lg:text-[16vw] font-black leading-none tracking-tighter flex transition-colors duration-1000 ease-in-out ${selectedPhaseData?.colors || 'text-neutral-400'}`}
             >
             {farahLetters.map((letter, index) => (
               <span key={index} className="farah-letter-container">
