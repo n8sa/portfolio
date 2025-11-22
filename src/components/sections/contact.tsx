@@ -103,10 +103,6 @@ export function Contact() {
           </AlertDialog>
         </div>
 
-        <div className="mt-8 text-center">
-            <p className="text-muted-foreground text-sm">...or just send me a message here.</p>
-        </div>
-
         <div className="mt-6 w-full">
             <ContactForm />
         </div>
