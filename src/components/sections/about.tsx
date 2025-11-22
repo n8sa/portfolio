@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BookOpen, Briefcase, Heart, Rocket, Cloud, Terminal, Server, Star, BarChart, Wand2 } from 'lucide-react';
-import { GirlSilhouette } from './girl-silhouette';
 import Image from 'next/image';
 
 const phases = [
@@ -109,7 +108,6 @@ export function AboutSection() {
             >
             FARAH
           </motion.h1>
-          <GirlSilhouette activePhase={activePhase} />
         </div>
 
         {/* Content Panel */}
