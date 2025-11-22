@@ -1,0 +1,85 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const navLinks = [
+  { href: "#home", label: "Home" },
+  { href: "#featured", label: "Featured" },
+  { href: "#projects", label: "Projects" },
+  { href: "#skills", label: "Skills" },
+  { href: "#education", label: "Education" },
+  { href: "#contact", label: "Contact" },
+];
+
+export function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    setIsOpen(false);
+  };
+
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 backdrop-blur-sm" : "bg-transparent"}`}>
+      <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
+        <Link href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="font-headline text-2xl font-bold text-primary">
+          FN
+        </Link>
+        
+        {/* Desktop Nav */}
+        <nav className="hidden items-center gap-6 md:flex">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={(e) => handleLinkClick(e, link.href)}
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Mobile Nav Trigger */}
+        <div className="md:hidden">
+          <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </Button>
+        </div>
+
+        {/* Mobile Nav Panel */}
+        {isOpen && (
+            <div className="absolute top-20 left-0 right-0 md:hidden">
+                 <div className="container mx-auto">
+                    <nav className="flex flex-col items-center gap-6 rounded-lg bg-card p-6 shadow-lg">
+                    {navLinks.map((link) => (
+                        <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={(e) => handleLinkClick(e, link.href)}
+                        className="w-full text-center text-lg font-medium text-muted-foreground transition-colors hover:text-primary"
+                        >
+                        {link.label}
+                        </Link>
+                    ))}
+                    </nav>
+                 </div>
+            </div>
+        )}
+      </div>
+    </header>
+  );
+}
