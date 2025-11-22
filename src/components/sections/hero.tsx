@@ -80,7 +80,7 @@ export function Hero() {
             variants={subtitleVariants}
             className="mt-6 font-body text-lg text-primary/80 sm:text-xl md:text-2xl"
         >
-          Software Engineer
+          Where Ideas Become Experience
         </motion.h2>
 
         <motion.p
