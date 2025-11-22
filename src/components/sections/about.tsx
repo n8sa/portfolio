@@ -68,12 +68,6 @@ const textVariants = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 };
 
-const iconAnimation = {
-  hidden: { opacity: 0, scale: 0.5 },
-  visible: { opacity: 1, scale: 1, transition: { type: 'spring', stiffness: 200, damping: 10 } },
-  exit: { opacity: 0, scale: 0.5, transition: { duration: 0.3 } }
-};
-
 export function AboutSection() {
   const [activePhase, setActivePhase] = useState(phases[0].id);
   const selectedPhaseData = phases.find(p => p.id === activePhase);
@@ -111,52 +105,33 @@ export function AboutSection() {
             {farahLetters.map((letter, index) => (
               <span key={index} className="farah-letter-container">
                 {letter}
-                <AnimatePresence>
                   {/* Phase 1 Icon */}
                   {activePhase === 'phase-1' && index === 0 && (
-                    <motion.div
+                    <div
                       key="grad-cap"
-                      variants={iconAnimation}
-                      initial="hidden"
-                      animate="visible"
-                      exit="exit"
                       className="absolute -top-[5%] -left-[10%] text-neutral-300"
                     >
                       <GraduationCap size="20%" />
-                    </motion.div>
+                    </div>
                   )}
                   {/* Phase 2 Icon */}
                   {activePhase === 'phase-2' && index === 1 && (
-                     <motion.div
+                     <div
                       key="wrench"
-                      variants={iconAnimation}
-                      initial="hidden"
-                      animate="visible"
-                      exit="exit"
                       className="absolute -bottom-[5%] -right-[15%] text-neutral-300"
                     >
                       <Wrench size="12%" />
-                    </motion.div>
+                    </div>
                   )}
                   {/* Phase 3 Icon */}
                    {activePhase === 'phase-3' && index === 2 && (
-                     <motion.div
+                     <div
                       key="ship"
-                      variants={iconAnimation}
-                      initial="hidden"
-                      animate="visible"
-                      exit="exit"
                       className="absolute -top-[10%] left-0 w-full text-neutral-300"
                     >
-                      <motion.div
-                        animate={{ y: [0, -5, 0] }}
-                        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                      >
                          <Ship size="15%" />
-                      </motion.div>
-                    </motion.div>
+                    </div>
                   )}
-                </AnimatePresence>
               </span>
             ))}
           </motion.h1>
