@@ -56,7 +56,7 @@ export default function ProjectPage() {
         hidden: { opacity: 0, transition: { duration: 0.3 } },
         visible: { opacity: 1, transition: { duration: 0.5 } },
       }}
-      className="flex min-h-screen w-full flex-col bg-background"
+      className="flex min-h-screen w-full flex-col bg-background overflow-y-auto"
     >
       <div className="container mx-auto max-w-5xl px-4 py-24 sm:py-32">
         <motion.div variants={containerVariants} className="flex flex-col gap-16">

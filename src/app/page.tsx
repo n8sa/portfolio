@@ -8,24 +8,26 @@ import { Toaster } from '@/components/ui/toaster';
 import { Header } from '@/components/sections/header';
 import { AboutSection } from '@/components/sections/about';
 import { Projects } from '@/components/sections/projects';
+import { useSearchParams } from 'next/navigation';
 
 type SectionId = 'home' | 'about' | 'projects' | 'contact';
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<SectionId>('home');
+  const searchParams = useSearchParams();
 
   useEffect(() => {
-    const hash = window.location.hash.substring(1);
-    if (hash === 'projects') {
+    const section = searchParams.get('section');
+    if (section === 'projects') {
       setActiveSection('projects');
     }
-  }, []);
+  }, [searchParams]);
 
   const sectionVariants = {
     hidden: { opacity: 0, transition: { duration: 0.5, ease: 'easeInOut' } },
     visible: { opacity: 1, transition: { duration: 0.5, ease: 'easeInOut' } },
   };
-  
+
   const renderSection = () => {
     switch (activeSection) {
       case 'home':
