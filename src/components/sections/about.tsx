@@ -120,32 +120,42 @@ export function AboutSection() {
       </div>
       
       <div className="absolute bottom-16 left-0 right-0 z-20 w-full max-w-2xl mx-auto px-4">
-        <div className="relative w-full">
-          <div className="relative flex w-full">
-            {phases.map((phase, index) => (
-              <button
-                key={phase.id}
-                onClick={() => setActivePhase(phase.id)}
-                className="relative z-10 flex-1 group p-2 text-center flex flex-col items-center"
-              >
-                 <div className="relative w-full h-4">
-                    <div className={`
-                        absolute top-1/2 -translate-y-1/2 h-0.5 w-full transition-colors duration-300 
-                        ${activePhaseIndex >= index ? 'bg-primary/50' : 'bg-neutral-700 group-hover:bg-primary/30'}
-                    `}></div>
-                     <div className={`
-                        absolute top-1/2 -translate-y-1/2 h-2 w-0.5 transition-all duration-300 left-1/2 -translate-x-1/2
-                        ${activePhase === phase.id ? 'bg-primary drop-shadow-[0_0_4px_hsl(var(--primary))] h-3' : 'bg-neutral-500'}
-                      `}></div>
-                 </div>
-                 
+        <div className="relative flex w-full items-center">
+          {/* Timeline track */}
+          <div className="absolute top-1/2 h-0.5 w-full -translate-y-1/2 bg-neutral-700"></div>
+          <div 
+            className="absolute top-1/2 h-0.5 -translate-y-1/2 bg-primary/50 transition-all duration-300"
+            style={{ width: `${(activePhaseIndex / (phases.length -1)) * 100}%` }}
+          ></div>
+          
+          {/* Timeline buttons */}
+          <div className="relative flex w-full justify-between">
+            {phases.map((phase) => (
+              <div key={phase.id} className="z-10 flex flex-col items-center">
+                <motion.button
+                  onClick={() => setActivePhase(phase.id)}
+                  className="group relative flex h-5 w-5 items-center justify-center"
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <div className={`
+                    h-2 w-2 rounded-full transition-all duration-300
+                    ${activePhase === phase.id 
+                      ? 'bg-primary scale-150' 
+                      : 'bg-neutral-500 group-hover:bg-primary/50'
+                    }
+                  `}></div>
+                   {activePhase === phase.id && (
+                     <div className="absolute h-5 w-5 rounded-full border-2 border-primary filter drop-shadow-[0_0_4px_hsl(var(--primary))]"></div>
+                   )}
+                </motion.button>
                 <span className={`
-                  mt-2 text-xs font-medium transition-colors duration-300 block
+                  mt-3 text-xs font-medium transition-colors duration-300
                   ${activePhase === phase.id ? 'text-white' : 'text-neutral-400 group-hover:text-white'}
                 `}>
                   {phase.title}
                 </span>
-              </button>
+              </div>
             ))}
           </div>
         </div>
