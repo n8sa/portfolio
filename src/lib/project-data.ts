@@ -28,7 +28,7 @@ export const projects: Project[] = [
             "Responsive layout",
             "Lightweight AI logic"
         ],
-        tech: ["Next.js", "React", "Tailwind CSS", "AI Integration", "PHP"],
+        tech: ["HTML", "CSS", "GSAP", "JavaScript"],
         liveUrl: "https://pulse.astroawani.com/kuiz-belanjawan-2026",
         images: [
             { url: "https://storage.googleapis.com/project-media/a5113197-8c11-477c-a49e-1d374dc2a044", alt: "Kuiz Belanjawan main screen", hint: "website mockup" },
