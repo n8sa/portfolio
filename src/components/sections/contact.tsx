@@ -56,11 +56,11 @@ export function Contact() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="text-center w-full max-w-md"
       >
-        <h2 className="font-headline text-5xl font-bold tracking-tighter text-foreground sm:text-6xl md:text-7xl">
+        <h2 className="font-headline text-4xl font-bold tracking-tighter text-foreground sm:text-5xl">
           Let’s Connect
         </h2>
 
-        <div className="mt-12 flex items-center justify-center gap-12">
+        <div className="mt-8 flex items-center justify-center gap-10">
           <motion.button
             onClick={handleEmailCopy}
             variants={iconVariants}
@@ -69,7 +69,7 @@ export function Contact() {
             className="cursor-pointer"
             aria-label="Copy email address"
           >
-            <Mail className="h-16 w-16 text-primary transition-colors duration-300 hover:text-accent" />
+            <Mail className="h-12 w-12 text-primary transition-colors duration-300 hover:text-accent" />
           </motion.button>
 
           <AlertDialog>
@@ -81,7 +81,7 @@ export function Contact() {
                 className="cursor-pointer"
                 aria-label="Open LinkedIn profile"
               >
-                <Linkedin className="h-16 w-16 text-primary transition-colors duration-300 hover:text-accent" />
+                <Linkedin className="h-12 w-12 text-primary transition-colors duration-300 hover:text-accent" />
               </motion.button>
             </AlertDialogTrigger>
             <AlertDialogContent>
@@ -103,11 +103,11 @@ export function Contact() {
           </AlertDialog>
         </div>
 
-        <div className="mt-12 text-center">
-            <p className="text-muted-foreground">...or just send me a message here.</p>
+        <div className="mt-8 text-center">
+            <p className="text-muted-foreground text-sm">...or just send me a message here.</p>
         </div>
 
-        <div className="mt-8 w-full">
+        <div className="mt-6 w-full">
             <ContactForm />
         </div>
 
