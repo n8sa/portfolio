@@ -14,7 +14,6 @@ const phases = [
     content: 'UiTM student exploring technology, learning fundamentals, and discovering my direction.',
     icons: [BookOpen, Briefcase],
     colors: 'text-neutral-400',
-    gradient: { '--farah-grad-1': 'hsl(30 14% 85%)', '--farah-grad-2': 'hsl(30 14% 75%)' },
   },
   {
     id: 'phase-2',
@@ -25,7 +24,6 @@ const phases = [
     icons: [Cloud, Terminal, Server],
     logos: ['/fujitsu-logo.svg', '/parkson-logo.svg', '/petronas-logo.svg'],
     colors: 'text-[#D8A7B1]',
-    gradient: { '--farah-grad-1': '#D8A7B1', '--farah-grad-2': '#C1959C' },
   },
   {
     id: 'phase-3',
@@ -35,7 +33,6 @@ const phases = [
     content: 'Exploration, balance, and growth. Focused on health, family, travel, and upskilling in data, UI/UX, and AI.',
     icons: [Heart, Rocket, Wand2],
     colors: 'text-[#e6839c]',
-    gradient: { '--farah-grad-1': '#e6839c', '--farah-grad-2': '#d16a83' },
   },
   {
     id: 'phase-4',
@@ -45,7 +42,6 @@ const phases = [
     content: 'Blending data, design, and storytelling. Building meaningful and value-driven digital experiences with creative tech.',
     icons: [Star, BarChart, Wand2],
     colors: 'text-primary',
-    gradient: { '--farah-grad-1': 'hsl(var(--primary))', '--farah-grad-2': 'hsl(var(--accent))' },
   },
 ];
 
@@ -110,9 +106,7 @@ export function AboutSection() {
         {/* FARAH Hero */}
         <div className="farah-text-container">
           <motion.h1 
-            className="farah-text-gradient select-none text-[25vw] sm:text-[28vw] md:text-[30vw] lg:text-[22vw] font-black leading-none tracking-tighter flex"
-            animate={selectedPhaseData?.gradient || {}}
-            transition={{duration: 0.8, ease: 'easeInOut'}}
+            className={`select-none text-[25vw] sm:text-[28vw] md:text-[30vw] lg:text-[22vw] font-black leading-none tracking-tighter flex transition-colors duration-1000 ease-in-out ${selectedPhaseData?.colors || 'text-neutral-400'}`}
             >
             {farahLetters.map((letter, index) => (
               <span key={index} className="farah-letter-container">
