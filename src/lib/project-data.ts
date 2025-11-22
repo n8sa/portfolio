@@ -33,7 +33,6 @@ export const projects: Project[] = [
         images: [
             { url: "https://storage.googleapis.com/project-media/a5113197-8c11-477c-a49e-1d374dc2a044", alt: "Kuiz Belanjawan main screen", hint: "website mockup" },
             { url: "https://storage.googleapis.com/project-media/110e5728-4034-4171-8b38-5178e5898701", alt: "Kuiz Belanjawan UI flow", hint: "quiz interface" },
-            { url: "https://storage.googleapis.com/project-media/6fdc6f93-f1f3-4e4b-9e4a-4e2b0d0c3547", alt: "Kuiz Belanjawan results screen", hint: "quiz results" },
         ]
     },
     {
