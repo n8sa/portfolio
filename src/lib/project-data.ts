@@ -21,7 +21,7 @@ export const projects: Project[] = [
         slug: "kuiz-belanjawan-2026",
         category: "Web App",
         title: "KUIZ BELANJAWAN 2026",
-        description: "An upgraded, fast-loading microsite designed for millennials while intentionally crafted to attract the younger generation. This project turns complex budget information into a fun, simple, and accessible quiz experience. I focused on creating a smooth UI, strong visual flow, and interactive elements to make financial content feel light, engaging, and friendly for all users.",
+        description: "A fast, modern microsite built for millennials and designed to attract the younger generation by making budget information fun, simple, and accessible through an interactive quiz experience.",
         features: [
             "Cyber UI",
             "Smooth transitions",
