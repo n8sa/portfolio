@@ -55,7 +55,7 @@ export const projects: Project[] = [
     {
         slug: "awani-ai-content-generator",
         category: "AI Tool",
-        title: "AWANI AI CONTENT GENERATOR (CMS)",
+        title: "AWANI AI CONTENT GENERATOR",
         description: "A CMS enhancement tool that generates summaries and FAQ using AI to speed up editorial workflow.",
         features: [
             "Auto-summary",
