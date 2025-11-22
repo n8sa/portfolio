@@ -16,6 +16,7 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
 import React from 'react';
+import { ContactForm } from '../contact-form';
 
 const iconVariants = {
   initial: { scale: 1 },
@@ -48,12 +49,12 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="h-full w-full bg-background flex flex-col justify-center items-center">
+    <section id="contact" className="h-full w-full bg-background flex flex-col justify-center items-center p-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="text-center"
+        className="text-center w-full max-w-md"
       >
         <h2 className="font-headline text-5xl font-bold tracking-tighter text-foreground sm:text-6xl md:text-7xl">
           Let’s Connect
@@ -101,6 +102,15 @@ export function Contact() {
             </AlertDialogContent>
           </AlertDialog>
         </div>
+
+        <div className="mt-12 text-center">
+            <p className="text-muted-foreground">...or just send me a message here.</p>
+        </div>
+
+        <div className="mt-8 w-full">
+            <ContactForm />
+        </div>
+
       </motion.div>
     </section>
   );
