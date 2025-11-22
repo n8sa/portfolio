@@ -16,7 +16,6 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
 import React from 'react';
-import { ContactForm } from '../contact-form';
 
 const iconVariants = {
   initial: { scale: 1 },
@@ -102,11 +101,6 @@ export function Contact() {
             </AlertDialogContent>
           </AlertDialog>
         </div>
-
-        <div className="mt-6 w-full">
-            <ContactForm />
-        </div>
-
       </motion.div>
     </section>
   );
