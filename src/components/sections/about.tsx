@@ -135,7 +135,7 @@ export function AboutSection() {
                     `}></div>
                      <div className={`
                         absolute top-1/2 -translate-y-1/2 h-2 w-0.5 transition-all duration-300 left-1/2 -translate-x-1/2
-                        ${activePhase === phase.id ? 'bg-primary shadow-[0_0_8px_theme(colors.primary)] h-3' : 'bg-neutral-500'}
+                        ${activePhase === phase.id ? 'bg-primary drop-shadow-[0_0_4px_hsl(var(--primary))] h-3' : 'bg-neutral-500'}
                       `}></div>
                  </div>
                  
