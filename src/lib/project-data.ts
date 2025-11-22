@@ -1,3 +1,4 @@
+
 export type ProjectImage = {
     url: string;
     alt: string;
@@ -19,7 +20,7 @@ export const projects: Project[] = [
     {
         slug: "kuiz-belanjawan-2026",
         category: "Web App",
-        title: "Kuiz Belanjawan 2026",
+        title: "KUIZ BELANJAWAN 2026",
         description: "A fast and modern quiz microsite for younger audiences, built with cyber-style UI and AI-enhanced elements to make budget information fun and accessible.",
         features: [
             "Cyber UI",
@@ -38,7 +39,7 @@ export const projects: Project[] = [
     {
         slug: "awani-ramadan-microsite",
         category: "Web App",
-        title: "AWANI Ramadan Microsite",
+        title: "AWANI RAMADAN MICROSITE",
         description: "A fully interactive Ramadan microsite with prayer times, news content, sliders, and animated hero sections.",
         features: [
             "Real-time prayer display",
@@ -55,7 +56,7 @@ export const projects: Project[] = [
     {
         slug: "awani-ai-content-generator",
         category: "AI Tool",
-        title: "AWANI AI Content Generator (CMS)",
+        title: "AWANI AI CONTENT GENERATOR (CMS)",
         description: "A CMS enhancement tool that generates summaries and FAQ using AI to speed up editorial workflow.",
         features: [
             "Auto-summary",
@@ -73,7 +74,7 @@ export const projects: Project[] = [
      {
         slug: "budget-calculator-2026",
         category: "Web App",
-        title: "Budget Calculator 2026",
+        title: "BUDGET CALCULATOR 2026",
         description: "A lightweight quiz calculator with a simple step-by-step UI for public engagement.",
         features: [
             "Clean steps",
@@ -90,7 +91,7 @@ export const projects: Project[] = [
     {
         slug: "personal-portfolio",
         category: "Web App",
-        title: "Personal Portfolio",
+        title: "PERSONAL PORTFOLIO",
         description: "A cinematic one-page experience with static sections, bold typography, and animated transitions designed to reflect my identity and craft.",
         features: [
             "Full-viewport sections",
