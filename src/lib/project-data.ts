@@ -32,6 +32,7 @@ export const projects: Project[] = [
         images: [
             { url: "https://picsum.photos/seed/kb-1/1200/800", alt: "Kuiz Belanjawan main screen", hint: "website mockup" },
             { url: "https://picsum.photos/seed/kb-2/1200/800", alt: "Kuiz Belanjawan UI flow", hint: "quiz interface" },
+            { url: "https://picsum.photos/seed/kb-3/1200/800", alt: "Kuiz Belanjawan results screen", hint: "quiz results" },
         ]
     },
     {

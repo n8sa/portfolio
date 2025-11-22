@@ -27,15 +27,28 @@ export default function ProjectPage() {
     },
   };
 
-  const itemVariants = {
+  const leftColVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.6,
         ease: [0.43, 0.13, 0.23, 0.96],
       },
+    },
+  };
+
+  const rightColVariants = {
+    hidden: { opacity: 0, x: 20 },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            duration: 0.6,
+            ease: [0.43, 0.13, 0.23, 0.96],
+            delay: 0.2,
+        },
     },
   };
   
@@ -47,105 +60,102 @@ export default function ProjectPage() {
     }
   };
 
+  const buttonHoverVariants = {
+    hover: {
+        scale: 1.05,
+        filter: 'drop-shadow(0 0 8px hsl(var(--primary) / 0.5))',
+        transition: { duration: 0.3 }
+    }
+  }
+
   return (
     <motion.main
       initial="hidden"
       animate="visible"
       exit="hidden"
-      variants={{
-        hidden: { opacity: 0, transition: { duration: 0.3 } },
-        visible: { opacity: 1, transition: { duration: 0.5 } },
-      }}
-      className="flex min-h-screen w-full flex-col bg-background overflow-y-auto"
+      variants={containerVariants}
+      className="flex h-screen w-screen flex-col items-center justify-center bg-background overflow-hidden p-8"
     >
-      <div className="container mx-auto max-w-5xl px-4 py-24 sm:py-32">
-        <motion.div variants={containerVariants} className="flex flex-col gap-16">
-            <motion.div variants={itemVariants}>
-                <Link
-                href="/?section=projects"
-                className="group flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
-                <motion.div whileHover={{ x: -4 }} transition={{ type: 'spring', stiffness: 300 }}>
-                    <ArrowLeft className="h-4 w-4" />
-                </motion.div>
-                Back to Projects
-                </Link>
+        <motion.div variants={leftColVariants} className="absolute top-8 left-8">
+            <Link
+            href="/?section=projects"
+            className="group flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+            <motion.div whileHover={{ x: -4 }} transition={{ type: 'spring', stiffness: 300 }}>
+                <ArrowLeft className="h-4 w-4" />
             </motion.div>
-
-          <motion.h1
-            variants={itemVariants}
-            className="font-headline text-5xl font-bold tracking-tighter text-foreground sm:text-6xl md:text-7xl"
-          >
-            {project.title}
-          </motion.h1>
-
-          <motion.div variants={itemVariants} className="grid grid-cols-1 gap-12 md:grid-cols-3">
-            <div className="md:col-span-2">
-              <h2 className="text-xl font-bold text-primary">About the project</h2>
-              <p className="mt-4 text-base text-muted-foreground md:text-lg">
-                {project.description}
-              </p>
-            </div>
-            <div>
-              <h2 className="text-xl font-bold text-primary">Tech Stack</h2>
-              <ul className="mt-4 space-y-2 text-muted-foreground">
-                {project.tech.map((tech) => (
-                  <li key={tech}>{tech}</li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
-          
-          <motion.div variants={itemVariants} className="grid grid-cols-1 gap-8">
-             <div>
-              <h2 className="text-xl font-bold text-primary">Key Features</h2>
-              <ul className="mt-4 list-disc list-inside space-y-2 text-muted-foreground">
-                {project.features.map((feature) => (
-                  <li key={feature}>{feature}</li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
-
-          {project.images && project.images.length > 0 && (
-             <motion.div variants={itemVariants} className="grid grid-cols-1 gap-8">
-                <div>
-                    <h2 className="text-xl font-bold text-primary">Gallery</h2>
-                    <div className="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
-                    {project.images.map((img, index) => (
-                        <motion.div 
-                          key={index} 
-                          className="overflow-hidden rounded-lg"
-                          variants={imageHoverVariants}
-                          whileHover="hover"
-                        >
-                        <Image
-                            src={img.url}
-                            alt={img.alt}
-                            width={1200}
-                            height={800}
-                            className="h-full w-full object-cover"
-                            data-ai-hint={img.hint}
-                        />
-                        </motion.div>
-                    ))}
-                    </div>
-                </div>
-            </motion.div>
-          )}
-
-
-          {project.liveUrl && project.liveUrl !== '#' && (
-            <motion.div variants={itemVariants}>
-              <Button asChild size="lg" className="rounded-full">
-                <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                  View Project <ArrowUpRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </motion.div>
-          )}
+            Back to Projects
+            </Link>
         </motion.div>
-      </div>
+
+        <div className="container mx-auto max-w-6xl w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                {/* Left Column */}
+                <motion.div variants={leftColVariants} className="flex flex-col gap-8">
+                    <motion.h1
+                        variants={leftColVariants}
+                        className="font-headline text-5xl font-bold tracking-tighter text-foreground sm:text-6xl"
+                    >
+                        {project.title}
+                    </motion.h1>
+
+                    <div>
+                        <h2 className="text-lg font-bold text-primary">About the project</h2>
+                        <p className="mt-2 text-sm text-muted-foreground">
+                        {project.description}
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 className="text-lg font-bold text-primary">Tech Stack</h2>
+                        <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground">
+                            {project.tech.map((tech) => (
+                            <li key={tech} className="bg-muted/50 px-2 py-1 rounded-md">{tech}</li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {project.liveUrl && project.liveUrl !== '#' && (
+                        <motion.div variants={buttonHoverVariants} whileHover="hover">
+                            <Button asChild size="lg" className="rounded-full w-full sm:w-auto">
+                                <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                                Live Demo <ArrowUpRight className="ml-2 h-4 w-4" />
+                                </Link>
+                            </Button>
+                        </motion.div>
+                    )}
+                </motion.div>
+
+                {/* Right Column */}
+                {project.images && project.images.length > 0 && (
+                    <motion.div variants={rightColVariants} className="relative h-[450px] hidden md:block">
+                        {project.images.slice(0, 3).map((img, index) => (
+                             <motion.div
+                                key={index}
+                                className="absolute w-[80%] overflow-hidden rounded-lg shadow-2xl"
+                                style={{
+                                    zIndex: 3 - index,
+                                    top: `${index * 15}%`,
+                                    left: `${index * 5}%`,
+                                    rotate: `${(index - 1) * 4}deg`
+                                }}
+                                variants={imageHoverVariants}
+                                whileHover="hover"
+                            >
+                                <Image
+                                    src={img.url}
+                                    alt={img.alt}
+                                    width={800}
+                                    height={600}
+                                    className="h-full w-full object-cover"
+                                    data-ai-hint={img.hint}
+                                />
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                )}
+            </div>
+        </div>
     </motion.main>
   );
 }
