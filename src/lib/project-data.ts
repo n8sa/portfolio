@@ -31,8 +31,8 @@ export const projects: Project[] = [
         tech: ["HTML", "CSS", "GSAP", "JavaScript"],
         liveUrl: "https://pulse.astroawani.com/kuiz-belanjawan-2026",
         images: [
-            { url: "https://storage.googleapis.com/project-media/a5113197-8c11-477c-a49e-1d374dc2a044", alt: "Kuiz Belanjawan main screen", hint: "website mockup" },
-            { url: "https://storage.googleapis.com/project-media/6fdc6f93-f1f3-4e4b-9e4a-4e2b0d0c3547", alt: "Kuiz Belanjawan results screen", hint: "quiz results" },
+            { url: "/images/kuiz-belanjawan-1.png", alt: "Kuiz Belanjawan main screen", hint: "website mockup" },
+            { url: "/images/kuiz-belanjawan-2.png", alt: "Kuiz Belanjawan results screen", hint: "quiz results" },
         ]
     },
     {
