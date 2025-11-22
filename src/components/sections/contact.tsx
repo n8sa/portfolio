@@ -28,7 +28,7 @@ const iconVariants = {
 
 export function Contact() {
   const { toast } = useToast();
-  const email = 'farah.nisa.dev@example.com';
+  const email = 'farahnisasyahindah@gmail.com';
   const linkedInUrl = 'https://www.linkedin.com/in/farahnisasyahindah';
 
   const handleEmailCopy = async () => {
