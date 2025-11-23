@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'WHO IS FARAH NISA?',
   description: 'The journey of Farah Nisa, a software and cloud engineer.',
