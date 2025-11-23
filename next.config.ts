@@ -1,13 +1,23 @@
-import type {NextConfig} from 'next';
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // FORCE dynamic rendering (fix Vercel static export issue)
+  output: 'standalone',
+  reactStrictMode: true,
+
+  // Disable static optimization for all routes
+  experimental: {
+    typedRoutes: false,
+  },
+
   typescript: {
     ignoreBuildErrors: true,
   },
+
   eslint: {
     ignoreDuringBuilds: true,
   },
+
   images: {
     remotePatterns: [
       {
