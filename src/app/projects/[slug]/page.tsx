@@ -5,7 +5,8 @@ import Link from 'next/link';
 import { notFound, useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, ArrowUpRight } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Linkedin } from 'lucide-react';
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import Image from 'next/image';
 
 export default function ProjectPage() {
@@ -188,14 +189,40 @@ export default function ProjectPage() {
                         </ul>
                     </div>
 
-                    {project.liveUrl && project.liveUrl !== '#' && (
-                        <motion.div variants={buttonHoverVariants} whileHover="hover" className="w-full sm:w-auto">
-                            <Button asChild size="lg" className="w-full rounded-full sm:w-auto">
-                                <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                                Live Demo <ArrowUpRight className="ml-2 h-4 w-4" />
-                                </Link>
-                            </Button>
-                        </motion.div>
+                    {((project.liveUrl && project.liveUrl !== '#') || project.linkedInPostUrl) && (
+                        <div className="flex flex-col gap-4 sm:flex-row">
+                            {project.liveUrl && project.liveUrl !== '#' && (
+                                <motion.div variants={buttonHoverVariants} whileHover="hover" className="w-full sm:w-auto">
+                                    <Button asChild size="lg" className="w-full rounded-full sm:w-auto">
+                                        <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                                        Live Demo <ArrowUpRight className="ml-2 h-4 w-4" />
+                                        </Link>
+                                    </Button>
+                                </motion.div>
+                            )}
+
+                            {project.linkedInPostUrl && (
+                                <Dialog>
+                                    <motion.div variants={buttonHoverVariants} whileHover="hover" className="w-full sm:w-auto">
+                                        <DialogTrigger asChild>
+                                            <Button size="lg" variant="outline" className="w-full rounded-full sm:w-auto">
+                                                <Linkedin className="mr-2 h-4 w-4" /> View LinkedIn Post
+                                            </Button>
+                                        </DialogTrigger>
+                                    </motion.div>
+                                    <DialogContent className="max-h-[90vh] w-[calc(100%-2rem)] max-w-[552px] overflow-y-auto p-6">
+                                        <DialogTitle className="pr-6">{project.title} on LinkedIn</DialogTitle>
+                                        <iframe
+                                            src={project.linkedInPostUrl}
+                                            title="Embedded post"
+                                            height={988}
+                                            className="w-full rounded-md bg-white"
+                                            allowFullScreen
+                                        />
+                                    </DialogContent>
+                                </Dialog>
+                            )}
+                        </div>
                     )}
                 </motion.div>
 

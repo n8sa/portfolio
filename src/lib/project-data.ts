@@ -13,10 +13,66 @@ export type Project = {
     features: string[];
     tech: string[];
     liveUrl: string;
+    linkedInPostUrl?: string;
     images: ProjectImage[];
 };
 
 export const projects: Project[] = [
+    {
+        slug: "kuiz-belanjawan-2027",
+        category: "Web App",
+        title: "KUIZ BELANJAWAN 2027",
+        description: "Astro AWANI's Belanjawan 2027 microsite, made up of two parts: Dunia Belanjawan, an interactive city where each building reveals a ministry's allocation year by year, and Kalkulator Manfaat, a 10-question quiz that shows which budget benefits may apply to you.",
+        features: [
+            "Interactive city map of the six largest ministry allocations",
+            "Year-by-year timeline from 2022 to 2026",
+            "10-question benefits calculator quiz",
+            "Buildings light up to match the benefits in your result"
+        ],
+        tech: ["HTML", "CSS", "JavaScript"],
+        liveUrl: "https://pulse.astroawani.com/belanjawan-2027-infografik/",
+        images: [
+            { url: "/images/belanjawan2027-1.png", alt: "Dunia Belanjawan interactive city map", hint: "interactive infographic" },
+            { url: "/images/belanjawan2027-2.png", alt: "Kalkulator Manfaat quiz question", hint: "quiz interface" },
+        ]
+    },
+    {
+        slug: "berita-swipe",
+        category: "Web App",
+        title: "BERITA SWIPE",
+        description: "An AI-personalized news swipe prototype for Astro AWANI that cuts through news overload: no endless scrolling, just the 5 most relevant stories of the day. It uses the OpenAI API to tag articles and generate questions, then personalizes each reader's stories from their answers to mood-based questions, what is happening that day, and how they interact during the session.",
+        features: [
+            "AI article tagging and categorization with the OpenAI API",
+            "AI-generated, mood-based questions to personalize the feed",
+            "Recommendations from session-based reader signals and the day's news",
+            "Editorial dashboard tracking readers, swipes, and article opens"
+        ],
+        tech: ["HTML", "CSS", "JavaScript", "OpenAI API"],
+        liveUrl: "#",
+        linkedInPostUrl: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7509853351384313856?collapsed=1",
+        images: [
+            { url: "/images/beritaswipe1.png", alt: "Berita Swipe welcome screen", hint: "news app" },
+            { url: "/images/beritaswipe2.png", alt: "Newsroom AI editorial dashboard", hint: "dashboard ui" },
+        ]
+    },
+    {
+        slug: "jiwa-sme",
+        category: "Website",
+        title: "JIWA SME",
+        description: "The official website for Jiwa SME, Astro AWANI's nationwide initiative connecting entrepreneurs with opportunities, inspiration, and community. It brings together the speaker line-up, impact numbers, news coverage, and a gallery of events held across Malaysia.",
+        features: [
+            "Speaker line-up for each event location",
+            "Impact metrics section",
+            "Photo and video hub from 2023 to 2026",
+            "Sponsors, partners, and event registration"
+        ],
+        tech: ["HTML", "CSS", "JavaScript"],
+        liveUrl: "https://www.jiwasme.com.my/",
+        images: [
+            { url: "/images/jiwa1.png", alt: "Jiwa SME homepage hero", hint: "website homepage" },
+            { url: "/images/jiwa2.png", alt: "Jiwa SME speaker profiles section", hint: "speaker profiles" },
+        ]
+    },
     {
         slug: "kuiz-belanjawan-2026",
         category: "Web App",
@@ -36,23 +92,6 @@ export const projects: Project[] = [
         ]
     },
     {
-        slug: "awani-ramadan-microsite",
-        category: "Web App",
-        title: "AWANI RAMADAN MICROSITE",
-        description: "A fully interactive Ramadan microsite with prayer times, news content, sliders, and animated hero sections.",
-        features: [
-            "Real-time prayer display",
-            "Animation system",
-            "Islamic-themed UI"
-        ],
-        tech: ["HTML", "Tailwind CSS", "JavaScript", "GSAP", "APIs"],
-        liveUrl: "#",
-        images: [
-            { url: "/images/ramadan1.png", alt: "Ramadan microsite hero section", hint: "islamic pattern" },
-            { url: "/images/ramadan2.png", alt: "Ramadan microsite prayer times", hint: "mobile app" },
-        ]
-    },
-    {
         slug: "awani-ai-content-generator",
         category: "AI Tool",
         title: "AWANI AI CONTENT GENERATOR",
@@ -68,24 +107,6 @@ export const projects: Project[] = [
         images: [
             { url: "/images/ai1.png", alt: "AI content generator interface", hint: "dashboard ui" },
             { url: "/images/ai2.png", alt: "Generated content example", hint: "text editor" },
-        ]
-    },
-    {
-        slug: "octopost",
-        category: "Web App",
-        title: "OCTOPOST",
-        description: "A multi-phase content publishing and dashboard project. It includes a Post module for managing and scheduling content, and a Dashboard module for analytics and insights. My work included planning the entire development timeline and structuring the architecture for a cleaner, more modern workflow.",
-        features: [
-            "Post module for content publishing",
-            "Dashboard module with analytics overview",
-            "Clean timeline planning with weekly sprints",
-            "Modern UI layout with smooth interactions"
-        ],
-        tech: ["Next.js", "React", "Tailwind CSS", "Node.js", "API Integration"],
-        liveUrl: "#",
-        images: [
-            { url: "/images/Octo1.png", alt: "Octopost dashboard view", hint: "dashboard analytics" },
-            { url: "/images/Octo2.png", alt: "Octopost content scheduling UI", hint: "content calendar" },
         ]
     }
 ];
