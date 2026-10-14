@@ -1,0 +1,578 @@
+{
+  "profileUrl": "https://www.linkedin.com/in/farahnisasyahindah/details/certifications/",
+  "categories": {
+    "ai-automation": "AI & Automation",
+    "software-development": "Software Development",
+    "cloud-it": "Cloud & IT",
+    "digital-sustainability": "Digital Transformation & Sustainability",
+    "professional-skills": "Professional Skills"
+  },
+  "types": {
+    "certification": "Certification",
+    "certificate": "Certificate",
+    "course": "Course",
+    "learning-path": "Learning path",
+    "participation": "Participation"
+  },
+  "issuers": {
+    "Microsoft": {
+      "mark": "MS",
+      "tone": "lavender",
+      "logo": null
+    },
+    "Google": {
+      "mark": "G",
+      "tone": "sage",
+      "logo": null
+    },
+    "Anthropic": {
+      "mark": "A",
+      "tone": "peach",
+      "logo": null
+    },
+    "Meta": {
+      "mark": "M",
+      "tone": "lavender",
+      "logo": null
+    },
+    "MyDIGITAL Corporation": {
+      "mark": "MD",
+      "tone": "sage",
+      "logo": null
+    },
+    "LinkedIn": {
+      "mark": "in",
+      "tone": "ink",
+      "logo": null
+    },
+    "LinkedIn Learning": {
+      "mark": "in",
+      "tone": "ink",
+      "logo": null
+    },
+    "Skillsoft": {
+      "mark": "S",
+      "tone": "peach",
+      "logo": null
+    }
+  },
+  "certifications": [
+    {
+      "id": "ai-for-research-and-insights-2026",
+      "title": "AI for Research and Insights",
+      "issuer": "Google",
+      "issuedMonth": 10,
+      "issuedYear": 2026,
+      "category": "ai-automation",
+      "skills": [],
+      "credentialId": "0E6BTGSAA0R5",
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "certificate"
+    },
+    {
+      "id": "ai-for-brainstorming-and-planning-2026",
+      "title": "AI for Brainstorming and Planning",
+      "issuer": "Google",
+      "issuedMonth": 10,
+      "issuedYear": 2026,
+      "category": "ai-automation",
+      "skills": [
+        "Product Planning",
+        "AI Personalization"
+      ],
+      "credentialId": "MYYBJM6P2VM8",
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "certificate"
+    },
+    {
+      "id": "ai-fundamentals-2026",
+      "title": "AI Fundamentals",
+      "issuer": "Google",
+      "issuedMonth": 9,
+      "issuedYear": 2026,
+      "category": "ai-automation",
+      "skills": [
+        "AI Prompting",
+        "Artificial Intelligence"
+      ],
+      "credentialId": "O7V872LBPVJO",
+      "credentialUrl": null,
+      "featured": true,
+      "credentialType": "certificate",
+      "featuredRank": 4
+    },
+    {
+      "id": "understanding-digital-transformation-2026",
+      "title": "Understanding Digital Transformation",
+      "issuer": "MyDIGITAL Corporation",
+      "issuedMonth": 9,
+      "issuedYear": 2026,
+      "category": "digital-sustainability",
+      "skills": [
+        "Digital Transformation"
+      ],
+      "credentialId": "V8SVTME6KOCG",
+      "credentialUrl": null,
+      "featured": true,
+      "credentialType": "certificate",
+      "featuredRank": 5
+    },
+    {
+      "id": "certificate-of-completion-claude-code-101-2026",
+      "title": "Certificate of Completion: Claude Code 101",
+      "issuer": "Anthropic",
+      "issuedMonth": 5,
+      "issuedYear": 2026,
+      "category": "ai-automation",
+      "skills": [
+        "Claude Skills",
+        "Claude Code Subagents"
+      ],
+      "credentialId": "jws8bks2dbxt",
+      "credentialUrl": null,
+      "featured": true,
+      "credentialType": "certificate",
+      "featuredRank": 3
+    },
+    {
+      "id": "certificate-of-completion-claude-101-2026",
+      "title": "Certificate of Completion: Claude 101",
+      "issuer": "Anthropic",
+      "issuedMonth": 5,
+      "issuedYear": 2026,
+      "category": "ai-automation",
+      "skills": [],
+      "credentialId": "vwza7k6rwusq",
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "certificate"
+    },
+    {
+      "id": "career-essentials-in-sustainable-tech-by-microsoft-and-linke",
+      "title": "Career Essentials in Sustainable Tech by Microsoft and LinkedIn",
+      "issuer": "Microsoft",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "digital-sustainability",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "learning-path"
+    },
+    {
+      "id": "an-introduction-to-ai-and-sustainability-2025",
+      "title": "An Introduction to AI and Sustainability",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "digital-sustainability",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "including-sustainability-in-your-cloud-strategy-2025",
+      "title": "Including Sustainability in Your Cloud Strategy",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "digital-sustainability",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "sustainability-foundations-core-concepts-2025",
+      "title": "Sustainability Foundations: Core Concepts",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "digital-sustainability",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "closing-the-green-skills-gap-to-power-a-greener-economy-and-",
+      "title": "Closing the Green Skills Gap to Power a Greener Economy and Drive Sustainability",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "digital-sustainability",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "microsoft-cloud-for-sustainability-esg-and-the-future-of-bus",
+      "title": "Microsoft Cloud for Sustainability: ESG and the Future of Business",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "digital-sustainability",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "unconscious-bias-2025",
+      "title": "Unconscious Bias",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "professional-skills",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "banish-your-inner-critic-to-unleash-creativity-2025",
+      "title": "Banish Your Inner Critic to Unleash Creativity",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "professional-skills",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "writing-in-plain-language-2025",
+      "title": "Writing in Plain Language",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "professional-skills",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "effective-listening-2025",
+      "title": "Effective Listening",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "professional-skills",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "persuading-others-2025",
+      "title": "Persuading Others",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "professional-skills",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "communication-foundations-2025",
+      "title": "Communication Foundations",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "professional-skills",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "teamwork-foundations-2025",
+      "title": "Teamwork Foundations",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "professional-skills",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "why-trust-matters-with-rachel-botsman-2025",
+      "title": "Why Trust Matters with Rachel Botsman",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "professional-skills",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "critical-thinking-for-better-judgment-and-decision-making-20",
+      "title": "Critical Thinking for Better Judgment and Decision-Making",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "professional-skills",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "embracing-unexpected-change-2025",
+      "title": "Embracing Unexpected Change",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "professional-skills",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "building-resilience-2025",
+      "title": "Building Resilience",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "professional-skills",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "developing-your-emotional-intelligence-2025",
+      "title": "Developing Your Emotional Intelligence",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "professional-skills",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "getting-started-with-microsoft-365-2025",
+      "title": "Getting Started with Microsoft 365",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "cloud-it",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "working-and-collaborating-online-2025",
+      "title": "Working and Collaborating Online",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "cloud-it",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "working-with-computers-and-devices-2025",
+      "title": "Working with Computers and Devices",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "cloud-it",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "digital-literacy-and-productivity-learning-pathway-2025",
+      "title": "Digital Literacy and Productivity Learning Pathway",
+      "issuer": "LinkedIn",
+      "issuedMonth": 8,
+      "issuedYear": 2025,
+      "category": "cloud-it",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "learning-path"
+    },
+    {
+      "id": "microsoft-and-fujitsu-you-me-and-microsoft-participant-2024",
+      "title": "Microsoft and Fujitsu You, Me and Microsoft – Participant",
+      "issuer": "Microsoft",
+      "issuedMonth": 6,
+      "issuedYear": 2024,
+      "category": "cloud-it",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "participation"
+    },
+    {
+      "id": "introduction-to-front-end-development-2024",
+      "title": "Introduction to Front-End Development",
+      "issuer": "Meta",
+      "issuedMonth": 2,
+      "issuedYear": 2024,
+      "category": "software-development",
+      "skills": [
+        "HTML",
+        "CSS",
+        "Front-end"
+      ],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": true,
+      "credentialType": "certificate",
+      "featuredRank": 2
+    },
+    {
+      "id": "migrating-cobol-apps-2023",
+      "title": "Migrating COBOL Apps",
+      "issuer": "LinkedIn Learning",
+      "issuedMonth": 10,
+      "issuedYear": 2023,
+      "category": "software-development",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "aws-certified-cloud-practitioner-clf-c01-cert-prep-1-cloud-c",
+      "title": "AWS Certified Cloud Practitioner (CLF-C01) Cert Prep: 1 Cloud Concepts",
+      "issuer": "LinkedIn Learning",
+      "issuedMonth": 7,
+      "issuedYear": 2023,
+      "category": "cloud-it",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "learning-python-2023",
+      "title": "Learning Python",
+      "issuer": "LinkedIn Learning",
+      "issuedMonth": 7,
+      "issuedYear": 2023,
+      "category": "software-development",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "linux-bash-shell-and-scripts-2023",
+      "title": "Linux: Bash Shell and Scripts",
+      "issuer": "LinkedIn Learning",
+      "issuedMonth": 7,
+      "issuedYear": 2023,
+      "category": "cloud-it",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "python-quick-start-2023",
+      "title": "Python Quick Start",
+      "issuer": "LinkedIn Learning",
+      "issuedMonth": 7,
+      "issuedYear": 2023,
+      "category": "software-development",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "windows-10-essential-training-2023",
+      "title": "Windows 10 Essential Training",
+      "issuer": "LinkedIn Learning",
+      "issuedMonth": 7,
+      "issuedYear": 2023,
+      "category": "cloud-it",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "agile-for-software-development-2022",
+      "title": "Agile for Software Development",
+      "issuer": "Skillsoft",
+      "issuedMonth": 6,
+      "issuedYear": 2022,
+      "category": "software-development",
+      "skills": [],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": false,
+      "credentialType": "course"
+    },
+    {
+      "id": "microsoft-certified-azure-fundamentals-2022",
+      "title": "Microsoft Certified: Azure Fundamentals",
+      "issuer": "Microsoft",
+      "issuedMonth": 6,
+      "issuedYear": 2022,
+      "category": "cloud-it",
+      "skills": [
+        "Microsoft Azure",
+        "Cloud Concepts"
+      ],
+      "credentialId": null,
+      "credentialUrl": null,
+      "featured": true,
+      "credentialType": "certification",
+      "featuredRank": 1
+    }
+  ]
+}

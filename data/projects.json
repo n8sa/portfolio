@@ -1,0 +1,267 @@
+[
+  {
+    "id": "belanjawan-2026",
+    "title": "Belanjawan 2026 Quiz & Calculator",
+    "category": "professional",
+    "status": "Live",
+    "url": null,
+    "featured": false,
+    "client": "Astro AWANI",
+    "summary": "A fast, modern microsite that makes budget information fun, simple and accessible for a younger audience through an interactive quiz.",
+    "overview": "A fast, modern microsite built for millennials and designed to attract the younger generation by making budget information fun, simple, and accessible through an interactive quiz experience.",
+    "features": [
+      "Cyber-style UI",
+      "Smooth transitions",
+      "Responsive layout",
+      "Lightweight quiz logic"
+    ],
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "GSAP"
+    ],
+    "images": [
+      {
+        "src": "assets/images/projects/kuiz1.jpg",
+        "alt": "Kalkulator Belanjawan 2026 landing screen with a start button"
+      },
+      {
+        "src": "assets/images/projects/kuiz2.jpg",
+        "alt": "Kuiz Belanjawan 2026 results screen"
+      }
+    ]
+  },
+  {
+    "id": "jiwa-sme",
+    "title": "JIWA SME",
+    "category": "professional",
+    "status": "Live",
+    "url": "https://www.jiwasme.com.my/",
+    "featured": true,
+    "client": "Astro AWANI",
+    "summary": "Official website for Jiwa SME, Astro AWANI's nationwide initiative connecting entrepreneurs with opportunities, inspiration and community.",
+    "overview": "The official website for Jiwa SME, Astro AWANI's nationwide initiative connecting entrepreneurs with opportunities, inspiration, and community. It brings together the speaker line-up, impact numbers, news coverage, and a gallery of events held across Malaysia.",
+    "features": [
+      "Speaker line-up for each event location",
+      "Impact metrics section",
+      "Photo and video hub from 2023 to 2026",
+      "Sponsors, partners and event registration"
+    ],
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "images": [
+      {
+        "src": "assets/images/projects/jiwa1.jpg",
+        "alt": "Jiwa SME homepage hero"
+      },
+      {
+        "src": "assets/images/projects/jiwa2.jpg",
+        "alt": "Jiwa SME speaker profiles section"
+      }
+    ]
+  },
+  {
+    "id": "berita-swipe",
+    "title": "Berita Swipe",
+    "category": "ai-automation",
+    "status": "Prototype",
+    "url": null,
+    "featured": true,
+    "client": "Astro AWANI",
+    "summary": "An AI-personalised news swipe prototype: no endless scrolling, just the five most relevant stories of the day.",
+    "overview": "An AI-personalised news swipe prototype for Astro AWANI. It uses the OpenAI API to tag articles and generate questions, then personalises each reader's stories from their answers to mood-based questions, what is happening that day, and how they interact during the session.",
+    "problem": "News overload — readers face endless scrolling instead of a short list of stories that matter to them.",
+    "features": [
+      "AI article tagging and categorisation with the OpenAI API",
+      "AI-generated, mood-based questions to personalise the feed",
+      "Recommendations from session-based reader signals and the day's news",
+      "Editorial dashboard tracking readers, swipes and article opens"
+    ],
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "OpenAI API"
+    ],
+    "images": [
+      {
+        "src": "assets/images/projects/beritaswipe1.jpg",
+        "alt": "Berita Swipe welcome screen"
+      },
+      {
+        "src": "assets/images/projects/beritaswipe2.jpg",
+        "alt": "Newsroom AI editorial dashboard"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn post",
+        "url": "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7509853351384313856?collapsed=1"
+      }
+    ]
+  },
+  {
+    "id": "belanjawan-2027",
+    "title": "Dunia Belanjawan 2027",
+    "category": "professional",
+    "status": "Live",
+    "url": "https://pulse.astroawani.com/belanjawan-2027-infografik/",
+    "featured": true,
+    "client": "Astro AWANI",
+    "summary": "An interactive city where each building reveals a ministry's budget allocation, paired with a quiz that shows which benefits may apply to you.",
+    "overview": "Astro AWANI's Belanjawan 2027 microsite, made up of two parts: Dunia Belanjawan, an interactive city where each building reveals a ministry's allocation year by year, and Kalkulator Manfaat, a 10-question quiz that shows which budget benefits may apply to you.",
+    "features": [
+      "Interactive city map of the six largest ministry allocations",
+      "Year-by-year timeline from 2022 to 2026",
+      "10-question benefits calculator quiz",
+      "Buildings light up to match the benefits in your result"
+    ],
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "images": [
+      {
+        "src": "assets/images/projects/belanjawan2027-1.jpg",
+        "alt": "Dunia Belanjawan interactive city map"
+      },
+      {
+        "src": "assets/images/projects/belanjawan2027-2.jpg",
+        "alt": "Kalkulator Manfaat quiz question"
+      }
+    ]
+  },
+  {
+    "id": "awani-cms-ai",
+    "title": "AWANI CMS AI — Summary & FAQ",
+    "category": "ai-automation",
+    "status": "Live",
+    "url": null,
+    "featured": false,
+    "client": "Astro AWANI",
+    "summary": "A CMS enhancement that generates article summaries and FAQs with AI to speed up the editorial workflow.",
+    "overview": "A CMS enhancement tool that generates summaries and FAQ using AI to speed up editorial workflow.",
+    "features": [
+      "Auto-summary",
+      "AI-powered FAQ",
+      "Structured output",
+      "Editor-friendly UI"
+    ],
+    "stack": [
+      "PHP",
+      "JavaScript",
+      "OpenAI API",
+      "HTML/CSS"
+    ],
+    "images": [
+      {
+        "src": "assets/images/projects/ai1.jpg",
+        "alt": "AI-generated 'Fakta Segera' FAQ block shown on an article page"
+      },
+      {
+        "src": "assets/images/projects/ai2.jpg",
+        "alt": "Generated content example"
+      }
+    ],
+    "links": [
+      {
+        "label": "Live on astroawani.com article pages",
+        "url": "https://www.astroawani.com/"
+      }
+    ]
+  },
+  {
+    "id": "vtc-holistics",
+    "title": "VTC Holistics Website",
+    "category": "client",
+    "status": "Live",
+    "url": "https://www.vtcholistic.com/",
+    "featured": false,
+    "client": "VTC Holistics",
+    "summary": "Website for VTC Holistics, a Malaysian provider of professional training, technical courses and talent development.",
+    "images": [
+      {
+        "src": "assets/images/projects/vtc1.jpg",
+        "alt": "VTC Holistics homepage hero: “Memperkasa Talent. Membina Masa Hadapan.” with programme and pathway buttons"
+      }
+    ]
+  },
+  {
+    "id": "whatsapp-dashboard",
+    "title": "Teringat — WhatsApp Automation & Reminder Dashboard",
+    "category": "ai-automation",
+    "status": "Working Prototype",
+    "url": null,
+    "featured": true,
+    "summary": "“WhatsApp je. Biar Teringat uruskan.” Send it on WhatsApp and Teringat keeps track: reminders, project ideas and saved links in one dashboard.",
+    "overview": "Teringat turns WhatsApp messages into an organised dashboard. It groups what you send into today's reminders, upcoming reminders by date and time, project ideas, saved links tagged by source, and a recently-added feed.",
+    "features": [
+      "Today and upcoming reminders with date and time",
+      "Project ideas list",
+      "Saved links tagged by source (e.g. Threads)",
+      "Recently-added feed",
+      "Delete items from the dashboard"
+    ],
+    "images": [
+      {
+        "src": "assets/images/projects/teringat1.jpg",
+        "alt": "Teringat dashboard on mobile showing today, upcoming reminders, project ideas, saved links and recently added items"
+      }
+    ],
+    "confidential": "Private messages and contact data are never shown in this portfolio."
+  },
+  {
+    "id": "hermes-whatsapp",
+    "title": "WhatsApp Hermes AI Personal Assistant",
+    "category": "ai-automation",
+    "status": "Live",
+    "url": null,
+    "featured": true,
+    "summary": "An AI personal assistant that lives in WhatsApp and runs scheduled jobs, like a daily brief of trending Shopee products with ready-to-post Threads captions.",
+    "overview": "Hermes is an AI personal assistant integrated with WhatsApp. Besides answering in chat, it runs scheduled cron jobs that message results back. One daily job picks five trending kitchen and home products on Shopee Malaysia under RM30, explains why each one is interesting, and drafts a Threads caption for each.",
+    "features": [
+      "Lives inside WhatsApp — no separate app",
+      "Scheduled cron jobs that report back in chat",
+      "Daily Shopee product brief: price, why it's interesting, and a Threads caption",
+      "Replies in Bahasa Malaysia"
+    ],
+    "confidential": "Private messages and contact data are never shown in this portfolio."
+  },
+  {
+    "id": "kira-zikir",
+    "title": "Kira Zikir",
+    "category": "experiments",
+    "status": "Deployed",
+    "url": "https://kirazikir.vercel.app/",
+    "featured": false
+  },
+  {
+    "id": "waktu-solat",
+    "title": "Waktu Solat",
+    "category": "experiments",
+    "status": "Deployed",
+    "url": "https://solat-seven.vercel.app/",
+    "featured": false
+  },
+  {
+    "id": "kumpul-doa",
+    "title": "Kumpul Doa — Doa Builder",
+    "category": "experiments",
+    "status": "Deployed",
+    "url": "https://doa-builder.vercel.app/",
+    "featured": false
+  },
+  {
+    "id": "tabung-syiling",
+    "title": "Game Kira Duit Syiling",
+    "category": "experiments",
+    "status": "Deployed",
+    "url": "https://gamesimple-peach.vercel.app/Tabung%20Syiling.html",
+    "featured": false
+  }
+]
